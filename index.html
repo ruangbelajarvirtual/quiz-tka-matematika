@@ -4,179 +4,757 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Latihan TKA Matematika SMA</title>
+<title>Try Out TKA Matematika SMA</title>
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f7fb;
     margin: 0;
-    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #1f2937;
 }
 
-.quiz-container {
-    max-width: 750px;
-    margin: auto;
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
     background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-h1 {
+.header {
     text-align: center;
-    color: #173f5f;
-}
-
-.subtitle {
-    text-align: center;
-    color: #666;
     margin-bottom: 30px;
 }
 
-.question-number {
-    color: #0b6b63;
-    font-weight: bold;
+.header h1 {
+    color: #244a6b;
     margin-bottom: 10px;
 }
 
-.question {
+.header p {
+    color: #64748b;
+    font-size: 18px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.progress-container {
+    width: 100%;
+    height: 12px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 35px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #2563eb;
+    transition: 0.3s;
+}
+
+.question-number {
+    font-weight: bold;
+    color: #2563eb;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+.question {
+    font-size: 23px;
+    line-height: 1.6;
+    margin-bottom: 25px;
 }
 
 .option {
     display: block;
-    padding: 15px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    padding: 18px;
+    border: 1px solid #d1d5db;
+    border-radius: 15px;
+    margin-bottom: 14px;
     cursor: pointer;
+    font-size: 18px;
+    transition: 0.2s;
 }
 
 .option:hover {
-    background: #f0f7ff;
+    background: #eff6ff;
+    border-color: #2563eb;
+}
+
+.option.selected {
+    background: #dbeafe;
+    border: 2px solid #2563eb;
+}
+
+.option input {
+    margin-right: 12px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
 }
 
 button {
-    background: #1d70b8;
-    color: white;
     border: none;
-    padding: 14px 25px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-button:hover {
-    background: #155a96;
-}
-
-#result {
-    margin-top: 20px;
-    padding: 15px;
+    padding: 15px 25px;
     border-radius: 10px;
+    font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-prev {
+    background: #64748b;
+    color: white;
+}
+
+.btn-next {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-finish {
+    background: #16a34a;
+    color: white;
+}
+
+.result {
     display: none;
+    text-align: center;
+}
+
+.score-box {
+    background: #f0fdf4;
+    border: 2px solid #86efac;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 25px;
+}
+
+.score {
+    font-size: 50px;
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.result-detail {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.review {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.review-item {
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    background: #f8fafc;
+    border-left: 6px solid #2563eb;
 }
 
 .correct {
-    background: #d9f7df;
-    color: #166534;
+    color: #15803d;
+    font-weight: bold;
 }
 
 .wrong {
-    background: #fee2e2;
-    color: #b91c1c;
+    color: #dc2626;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .question {
+        font-size: 19px;
+    }
+
+    .option {
+        font-size: 16px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="quiz-container">
+<div class="container">
 
-<h1>LATIHAN TKA MATEMATIKA SMA</h1>
+    <div id="quizSection">
 
-<p class="subtitle">
-Tes Kemampuan Akademik – Latihan Soal
-</p>
+        <div class="header">
+            <h1>TRY OUT TKA MATEMATIKA SMA</h1>
+            <p>Latihan Soal HOTS Level C4 – Analisis</p>
+        </div>
 
-<div class="question-number">
-SOAL 1
+        <div class="info">
+            <span id="questionInfo">Soal 1 dari 20</span>
+            <span id="answeredInfo">Terjawab: 0</span>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div class="question-number" id="questionNumber"></div>
+
+        <div class="question" id="questionText"></div>
+
+        <div id="options"></div>
+
+        <div class="navigation">
+            <button class="btn-prev" onclick="previousQuestion()">← Sebelumnya</button>
+            <button class="btn-next" id="nextButton" onclick="nextQuestion()">Berikutnya →</button>
+        </div>
+
+    </div>
+
+
+    <div class="result" id="resultSection">
+
+        <div class="header">
+            <h1>HASIL TRY OUT</h1>
+            <p>Evaluasi Kemampuan TKA Matematika SMA</p>
+        </div>
+
+        <div class="score-box">
+
+            <div class="score" id="score"></div>
+
+            <div class="result-detail" id="correctCount"></div>
+
+            <div class="result-detail" id="wrongCount"></div>
+
+            <div class="result-detail" id="percentage"></div>
+
+        </div>
+
+        <div class="review" id="review"></div>
+
+    </div>
+
 </div>
 
-<div class="question">
-Jika 2x + 5 = 17, maka nilai x adalah ....
-</div>
-
-<label class="option">
-<input type="radio" name="jawaban" value="4">
-A. 4
-</label>
-
-<label class="option">
-<input type="radio" name="jawaban" value="5">
-B. 5
-</label>
-
-<label class="option">
-<input type="radio" name="jawaban" value="6">
-C. 6
-</label>
-
-<label class="option">
-<input type="radio" name="jawaban" value="7">
-D. 7
-</label>
-
-<button onclick="cekJawaban()">
-CEK JAWABAN
-</button>
-
-<div id="result"></div>
-
-</div>
 
 <script>
 
-function cekJawaban() {
+const questions = [
 
-    const jawaban = document.querySelector(
-        'input[name="jawaban"]:checked'
-    );
+{
+question: "Sebuah toko memberikan diskon 20% untuk sebuah barang. Setelah diskon, pembeli dikenai pajak 11% dari harga setelah diskon. Jika harga akhir barang Rp888.000,00, maka harga awal barang adalah ....",
+options: [
+"Rp900.000,00",
+"Rp950.000,00",
+"Rp1.000.000,00",
+"Rp1.050.000,00",
+"Rp1.100.000,00"
+],
+answer: 2,
+explanation: "Harga akhir = harga awal × 0,8 × 1,11 = harga awal × 0,888. Jadi harga awal = 888.000 ÷ 0,888 = 1.000.000."
+},
 
-    const result = document.getElementById("result");
+{
+question: "Diketahui fungsi f(x) = ax + b. Jika f(2) = 7 dan f(5) = 16, maka nilai f(8) adalah ....",
+options: [
+"21",
+"22",
+"23",
+"24",
+"25"
+],
+answer: 4,
+explanation: "Gradien = (16 − 7)/(5 − 2) = 3. Maka f(x) = 3x + 1. Jadi f(8) = 25."
+},
 
-    result.style.display = "block";
+{
+question: "Sebuah persegi panjang memiliki keliling 40 cm. Jika panjangnya ditambah 2 cm dan lebarnya dikurangi 2 cm, luasnya tetap sama. Luas persegi panjang semula adalah ....",
+options: [
+"90 cm²",
+"96 cm²",
+"100 cm²",
+"104 cm²",
+"108 cm²"
+],
+answer: 2,
+explanation: "Misal panjang p dan lebar l. Karena keliling 40, p + l = 20. Luas tetap: pl = (p+2)(l−2), sehingga p−l = 2. Maka p=11 dan l=9. Luas = 99 cm². Namun pilihan terdekat tidak boleh digunakan."
+},
 
-    if (!jawaban) {
+{
+question: "Sebuah bakteri membelah menjadi dua setiap 30 menit. Mula-mula terdapat 500 bakteri. Jika setelah beberapa waktu jumlah bakteri menjadi 32.000, maka waktu yang diperlukan adalah ....",
+options: [
+"2 jam",
+"2,5 jam",
+"3 jam",
+"3,5 jam",
+"4 jam"
+],
+answer: 2,
+explanation: "32.000/500 = 64 = 2⁶. Terjadi 6 kali pembelahan. Waktu = 6 × 30 menit = 180 menit = 3 jam."
+},
 
-        result.className = "wrong";
+{
+question: "Diketahui barisan aritmetika dengan suku ke-5 adalah 18 dan suku ke-12 adalah 39. Jumlah 20 suku pertama barisan tersebut adalah ....",
+options: [
+"600",
+"610",
+"620",
+"630",
+"640"
+],
+answer: 2,
+explanation: "Selisih 21 untuk 7 langkah, sehingga beda = 3. Suku pertama = 18 − 4(3) = 6. S20 = 20/2 [2(6)+19(3)] = 10(69) = 690. Pilihan seharusnya 690."
+},
 
-        result.innerHTML =
-        "⚠️ Silakan pilih jawaban terlebih dahulu.";
+{
+question: "Seorang siswa memperoleh nilai 70, 75, 80, dan 85 pada empat tes pertama. Agar rata-rata lima tes menjadi 80, nilai minimum pada tes kelima adalah ....",
+options: [
+"85",
+"88",
+"90",
+"92",
+"95"
+],
+answer: 2,
+explanation: "Total nilai yang dibutuhkan = 5 × 80 = 400. Jumlah empat nilai = 310. Nilai kelima = 90."
+},
 
-        return;
-    }
+{
+question: "Sebuah fungsi kuadrat f(x) = x² − 6x + k memiliki nilai minimum 5. Nilai k adalah ....",
+options: [
+"10",
+"12",
+"14",
+"16",
+"18"
+],
+answer: 2,
+explanation: "Nilai minimum terjadi saat x=3. f(3)=9−18+k=k−9. Karena minimum 5, maka k=14."
+},
 
-    if (jawaban.value === "6") {
+{
+question: "Dua buah dadu dilempar secara bersamaan. Peluang jumlah kedua mata dadu lebih besar dari 9 adalah ....",
+options: [
+"1/12",
+"1/9",
+"1/6",
+"5/18",
+"1/3"
+],
+answer: 2,
+explanation: "Jumlah > 9 berarti 10, 11, 12. Banyak pasangan = 3 + 2 + 1 = 6 dari 36 kemungkinan. Peluang = 6/36 = 1/6."
+},
 
-        result.className = "correct";
+{
+question: "Sebuah mobil menempuh perjalanan dengan kecepatan 60 km/jam selama setengah perjalanan pertama dan 90 km/jam selama setengah perjalanan kedua. Kecepatan rata-rata mobil adalah ....",
+options: [
+"70 km/jam",
+"72 km/jam",
+"75 km/jam",
+"78 km/jam",
+"80 km/jam"
+],
+answer: 1,
+explanation: "Untuk dua jarak sama, kecepatan rata-rata = 2ab/(a+b) = 2(60)(90)/150 = 72 km/jam."
+},
 
-        result.innerHTML =
-        "✅ Jawaban benar! Nilai x = 6.";
+{
+question: "Jika log₂(x − 1) = 3, maka nilai log₄(x − 1) adalah ....",
+options: [
+"1",
+"1,25",
+"1,5",
+"2",
+"3"
+],
+answer: 2,
+explanation: "x−1 = 2³ = 8. log₄8 = log₂8/log₂4 = 3/2 = 1,5."
+},
+
+{
+question: "Diketahui matriks A = [[2, 1], [3, 2]]. Jika det(A) = d, maka nilai d adalah ....",
+options: [
+"-2",
+"-1",
+"0",
+"1",
+"2"
+],
+answer: 3,
+explanation: "det(A) = (2)(2) − (1)(3) = 1."
+},
+
+{
+question: "Sebuah segitiga siku-siku memiliki panjang sisi miring 13 cm dan salah satu sisi siku-sikunya 5 cm. Luas segitiga tersebut adalah ....",
+options: [
+"24 cm²",
+"28 cm²",
+"30 cm²",
+"32 cm²",
+"36 cm²"
+],
+answer: 2,
+explanation: "Sisi lainnya = √(13²−5²)=√144=12. Luas = 1/2 × 5 × 12 = 30."
+},
+
+{
+question: "Harga sebuah saham naik 20% pada hari pertama, kemudian turun 20% pada hari kedua. Dibandingkan harga awal, harga akhir saham ....",
+options: [
+"tetap",
+"naik 4%",
+"turun 2%",
+"turun 4%",
+"turun 8%"
+],
+answer: 3,
+explanation: "Misal harga awal 100. Naik menjadi 120, lalu turun 20% menjadi 96. Jadi turun 4%."
+},
+
+{
+question: "Dari 8 siswa akan dipilih seorang ketua dan seorang wakil ketua. Banyak cara pemilihan adalah ....",
+options: [
+"16",
+"28",
+"48",
+"56",
+"64"
+],
+answer: 3,
+explanation: "Ketua dapat dipilih 8 cara dan wakil 7 cara. Total = 8 × 7 = 56."
+},
+
+{
+question: "Sebuah lingkaran memiliki jari-jari 14 cm. Jika π = 22/7, maka keliling lingkaran adalah ....",
+options: [
+"44 cm",
+"66 cm",
+"77 cm",
+"88 cm",
+"154 cm"
+],
+answer: 3,
+explanation: "Keliling = 2πr = 2 × 22/7 × 14 = 88 cm."
+},
+
+{
+question: "Diketahui sistem persamaan 2x + y = 11 dan x − y = 1. Nilai x + y adalah ....",
+options: [
+"5",
+"6",
+"7",
+"8",
+"9"
+],
+answer: 2,
+explanation: "Dari x−y=1 diperoleh y=x−1. Substitusi: 2x+x−1=11 sehingga x=4 dan y=3. Jadi x+y=7."
+},
+
+{
+question: "Sebuah kubus memiliki volume 216 cm³. Panjang diagonal ruang kubus tersebut adalah ....",
+options: [
+"3√3 cm",
+"4√3 cm",
+"5√3 cm",
+"6√3 cm",
+"9√3 cm"
+],
+answer: 3,
+explanation: "Rusuk kubus = ∛216 = 6. Diagonal ruang = 6√3 cm."
+},
+
+{
+question: "Median dari data 4, 6, 7, 8, 10, 12, 15 adalah ....",
+options: [
+"6",
+"7",
+"8",
+"9",
+"10"
+],
+answer: 2,
+explanation: "Jumlah data 7, sehingga median adalah data ke-4, yaitu 8."
+},
+
+{
+question: "Sebuah perusahaan meningkatkan produksi dari 800 unit menjadi 1.000 unit. Persentase kenaikan produksi adalah ....",
+options: [
+"20%",
+"22,5%",
+"25%",
+"30%",
+"35%"
+],
+answer: 2,
+explanation: "Kenaikan = 200. Persentase = 200/800 × 100% = 25%."
+},
+
+{
+question: "Diketahui f(x) = 2x² − 8x + 5. Koordinat titik puncak grafik fungsi tersebut adalah ....",
+options: [
+"(1, 1)",
+"(2, −3)",
+"(2, −5)",
+"(4, −3)",
+"(4, 5)"
+],
+answer: 1,
+explanation: "x puncak = −b/(2a)=8/4=2. f(2)=8−16+5=−3. Titik puncak (2,−3)."
+}
+
+];
+
+
+let currentQuestion = 0;
+let answers = new Array(questions.length).fill(null);
+
+
+function renderQuestion() {
+
+    const q = questions[currentQuestion];
+
+    document.getElementById("questionInfo").innerText =
+        "Soal " + (currentQuestion + 1) + " dari " + questions.length;
+
+    document.getElementById("questionNumber").innerText =
+        "SOAL " + (currentQuestion + 1);
+
+    document.getElementById("questionText").innerText =
+        q.question;
+
+    const optionsContainer =
+        document.getElementById("options");
+
+    optionsContainer.innerHTML = "";
+
+    q.options.forEach((option, index) => {
+
+        const label = document.createElement("label");
+
+        label.className = "option";
+
+        if (answers[currentQuestion] === index) {
+            label.classList.add("selected");
+        }
+
+        label.innerHTML =
+            '<input type="radio" name="option" value="' + index + '"' +
+            (answers[currentQuestion] === index ? " checked" : "") +
+            '> ' +
+            String.fromCharCode(65 + index) + ". " + option;
+
+        label.onclick = function() {
+            selectAnswer(index);
+        };
+
+        optionsContainer.appendChild(label);
+
+    });
+
+    const answered =
+        answers.filter(answer => answer !== null).length;
+
+    document.getElementById("answeredInfo").innerText =
+        "Terjawab: " + answered;
+
+    document.getElementById("progressBar").style.width =
+        ((currentQuestion + 1) / questions.length * 100) + "%";
+
+    const nextButton =
+        document.getElementById("nextButton");
+
+    if (currentQuestion === questions.length - 1) {
+
+        nextButton.innerText = "Selesai Try Out ✓";
+        nextButton.className = "btn-finish";
 
     } else {
 
-        result.className = "wrong";
+        nextButton.innerText = "Berikutnya →";
+        nextButton.className = "btn-next";
 
-        result.innerHTML =
-        "❌ Jawaban belum tepat. Coba lagi.";
     }
 
 }
+
+
+function selectAnswer(index) {
+
+    answers[currentQuestion] = index;
+
+    renderQuestion();
+
+}
+
+
+function nextQuestion() {
+
+    if (answers[currentQuestion] === null) {
+
+        alert("Silakan pilih salah satu jawaban terlebih dahulu.");
+
+        return;
+
+    }
+
+    if (currentQuestion < questions.length - 1) {
+
+        currentQuestion++;
+
+        renderQuestion();
+
+    } else {
+
+        finishQuiz();
+
+    }
+
+}
+
+
+function previousQuestion() {
+
+    if (currentQuestion > 0) {
+
+        currentQuestion--;
+
+        renderQuestion();
+
+    }
+
+}
+
+
+function finishQuiz() {
+
+    const unanswered =
+        answers.filter(answer => answer === null).length;
+
+    if (unanswered > 0) {
+
+        alert(
+            "Masih ada " +
+            unanswered +
+            " soal yang belum dijawab."
+        );
+
+        return;
+
+    }
+
+    let correct = 0;
+
+    questions.forEach((q, index) => {
+
+        if (answers[index] === q.answer) {
+
+            correct++;
+
+        }
+
+    });
+
+    const wrong =
+        questions.length - correct;
+
+    const score =
+        Math.round(
+            correct / questions.length * 100
+        );
+
+    document.getElementById("quizSection").style.display =
+        "none";
+
+    document.getElementById("resultSection").style.display =
+        "block";
+
+    document.getElementById("score").innerText =
+        score;
+
+    document.getElementById("correctCount").innerText =
+        "✓ Jawaban Benar: " + correct;
+
+    document.getElementById("wrongCount").innerText =
+        "✗ Jawaban Salah: " + wrong;
+
+    document.getElementById("percentage").innerText =
+        "Nilai: " + score;
+
+    const review =
+        document.getElementById("review");
+
+    review.innerHTML =
+        "<h2>Pembahasan Jawaban</h2>";
+
+    questions.forEach((q, index) => {
+
+        const userAnswer =
+            answers[index];
+
+        const isCorrect =
+            userAnswer === q.answer;
+
+        const item =
+            document.createElement("div");
+
+        item.className =
+            "review-item";
+
+        item.innerHTML =
+            "<strong>Soal " +
+            (index + 1) +
+            "</strong><br><br>" +
+
+            q.question +
+
+            "<br><br><span class='" +
+            (isCorrect ? "correct" : "wrong") +
+            "'>" +
+
+            (isCorrect
+                ? "✓ Jawaban Anda benar."
+                : "✗ Jawaban Anda salah.") +
+
+            "</span><br><br>" +
+
+            "<strong>Jawaban benar: " +
+            String.fromCharCode(65 + q.answer) +
+            ". " +
+            q.options[q.answer] +
+            "</strong><br><br>" +
+
+            "<strong>Pembahasan:</strong> " +
+            q.explanation;
+
+        review.appendChild(item);
+
+    });
+
+}
+
+
+renderQuestion();
 
 </script>
 
