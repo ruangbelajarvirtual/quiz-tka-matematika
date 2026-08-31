@@ -3,780 +3,409 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Try Out TKA Matematika SMA</title>
-
+<title>Try Out TKA Matematika SMA - Ruang Belajar Virtual</title>
 <style>
-* {
-    box-sizing: border-box;
+:root{
+  --blue:#1757b8;
+  --blue2:#0f3f8e;
+  --light:#f4f7fb;
+  --text:#26384a;
+  --border:#d8e0ea;
+  --yellow:#f6b400;
+  --green:#43a047;
+  --red:#d9363e;
 }
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #eef2f7;
-    color: #1f2937;
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);
+  background:#e8eef6;
 }
-
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 40px auto;
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+.header{
+  min-height:92px;background:linear-gradient(135deg,#12365d,#235c91);
+  color:#fff;padding:16px 4vw;display:flex;align-items:center;justify-content:space-between;
 }
-
-.header {
-    text-align: center;
-    margin-bottom: 30px;
+.brand{display:flex;align-items:center;gap:14px}
+.logo{
+  width:56px;height:56px;border:2px solid rgba(255,255,255,.45);border-radius:50%;
+  display:grid;place-items:center;font-size:25px;background:rgba(255,255,255,.08)
 }
-
-.header h1 {
-    color: #244a6b;
-    margin-bottom: 10px;
+.brand h1{font-size:22px;margin:0;letter-spacing:.5px}
+.brand p{margin:5px 0 0;font-size:14px;opacity:.9}
+.user{text-align:right;font-size:14px}
+.app{
+  max-width:1500px;margin:16px auto;padding:0 16px 16px;
 }
-
-.header p {
-    color: #64748b;
-    font-size: 18px;
+.exam{
+  background:#fff;border-radius:18px;box-shadow:0 12px 35px rgba(20,50,80,.16);
+  overflow:hidden;
 }
-
-.info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    font-weight: bold;
+.top{
+  padding:20px 28px;border-bottom:1px solid #e2e8ef;
+  display:flex;justify-content:space-between;gap:20px;align-items:flex-start;
 }
-
-.progress-container {
-    width: 100%;
-    height: 12px;
-    background: #e5e7eb;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 35px;
+.top h2{margin:0;font-size:22px}
+.font-tools{margin-top:16px;display:flex;gap:18px;align-items:center}
+.font-tools button{border:0;background:transparent;font-size:16px;cursor:pointer;color:#394b5e}
+.top-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.pill,.blue-btn{
+  border-radius:24px;padding:11px 19px;border:1px solid #b8c5d3;background:#fff;
+  color:#465463;font-size:15px;
 }
-
-.progress-bar {
-    height: 100%;
-    width: 0%;
-    background: #2563eb;
-    transition: 0.3s;
+.blue-btn{background:var(--blue);color:#fff;border-color:var(--blue);cursor:pointer}
+.subject{text-align:right;margin-top:10px;font-size:18px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 320px}
+.main{padding:28px;min-width:0}
+.question-wrap{display:grid;grid-template-columns:minmax(260px,.8fr) minmax(450px,1.2fr);gap:28px;min-height:500px}
+.visual{
+  border-right:1px solid #e0e6ed;padding:12px 28px 12px 0;
 }
-
-.question-number {
-    font-weight: bold;
-    color: #2563eb;
-    font-size: 20px;
-    margin-bottom: 15px;
+.image-box{text-align:center;margin-bottom:22px}
+.image-box img{max-width:100%;max-height:270px;border-radius:8px}
+.question-text{font-size:22px;line-height:1.65;white-space:pre-line}
+.answer-area{padding-top:8px}
+.answer-intro{font-size:18px;line-height:1.55;margin-bottom:18px;white-space:pre-line}
+.option{
+  width:100%;text-align:left;background:#fff;border:1px solid #d9e0e8;border-radius:14px;
+  padding:17px 20px;margin:10px 0;display:flex;gap:15px;align-items:flex-start;
+  font-size:17px;line-height:1.45;color:#27394b;cursor:pointer;transition:.2s;
 }
-
-.question {
-    font-size: 23px;
-    line-height: 1.6;
-    margin-bottom: 25px;
+.option:hover{border-color:#80a7df;background:#f8fbff}
+.option.selected{border:2px solid #2166cc;background:#eef5ff}
+.radio{
+  width:25px;height:25px;border:1px solid #b9c5d2;border-radius:50%;flex:0 0 25px;
+  margin-top:1px;display:grid;place-items:center
 }
-    #questionImage {
-    text-align: center;
-    margin-bottom: 25px;
+.selected .radio{border-color:#2166cc}
+.selected .radio:after{content:"";width:12px;height:12px;border-radius:50%;background:#2166cc}
+.nav-bottom{
+  border-top:1px solid #e0e6ed;padding:20px 28px 26px;display:flex;justify-content:space-between;gap:15px
 }
-
-#questionImage img {
-    max-width: 100%;
-    width: 500px;
-    height: auto;
-    border-radius: 10px;
+.nav-btn{
+  border:0;border-radius:14px;padding:15px 28px;font-size:17px;font-weight:600;color:#fff;cursor:pointer
 }
-
-.option {
-    display: block;
-    padding: 18px;
-    border: 1px solid #d1d5db;
-    border-radius: 15px;
-    margin-bottom: 14px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: 0.2s;
+.prev{background:var(--red)} .doubt{background:var(--yellow);color:#fff}
+.next{background:var(--blue)}
+.palette{
+  border-left:1px solid #e0e6ed;background:#fbfcfe;padding:24px;
 }
-
-.option:hover {
-    background: #eff6ff;
-    border-color: #2563eb;
+.palette h3{margin:0 0 20px;font-size:18px}
+.numbers{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.num{
+  height:42px;border:1px solid #cbd5df;border-radius:7px;background:#fff;
+  cursor:pointer;font-size:15px;color:#2f4052
 }
-
-.option.selected {
-    background: #dbeafe;
-    border: 2px solid #2563eb;
+.num.active{background:#2166cc;color:#fff;border-color:#2166cc}
+.num.answered{background:#70b65b;color:#fff;border-color:#70b65b}
+.num.doubt{background:#f6b400;color:#fff;border-color:#f6b400}
+.legend{margin-top:30px;display:grid;gap:13px;font-size:14px}
+.legend span{display:flex;align-items:center;gap:12px}
+.box{width:20px;height:20px;border-radius:3px;border:1px solid #cbd5df;background:#fff}
+.box.yellow{background:#f6b400;border-color:#f6b400}.box.green{background:#70b65b;border-color:#70b65b}.box.blue{background:#2166cc;border-color:#2166cc}
+.finish{margin-top:28px;width:100%;padding:15px;border:0;border-radius:10px;background:var(--blue);color:#fff;font-size:17px;font-weight:600;cursor:pointer}
+.progress-area{padding:0 28px 18px}
+.progress-label{display:flex;justify-content:space-between;font-size:14px;font-weight:600;margin-bottom:9px}
+.progress-track{height:9px;border-radius:20px;background:#e2e7ed;overflow:hidden}
+.progress-bar{height:100%;background:#2166cc;width:5%;transition:.25s}
+.modal{
+  position:fixed;inset:0;background:rgba(20,30,45,.56);display:none;align-items:center;justify-content:center;padding:20px;z-index:20
 }
-
-.option input {
-    margin-right: 12px;
+.modal.show{display:flex}
+.modal-card{background:#fff;width:min(650px,100%);border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.3);overflow:hidden}
+.modal-head{padding:22px;border-bottom:1px solid #e0e6ed;display:flex;justify-content:space-between;align-items:center}
+.close{border:0;background:none;font-size:26px;cursor:pointer}
+.modal-body{padding:25px}
+.result{text-align:center;padding:20px 0}
+.score{font-size:56px;font-weight:700;color:var(--blue)}
+.result-list{text-align:left;margin-top:20px}
+.explain{padding:12px;border-bottom:1px solid #e7ebef;font-size:14px;line-height:1.55}
+@media(max-width:1000px){
+  .layout{grid-template-columns:1fr}.palette{border-left:0;border-top:1px solid #e0e6ed}
+  .question-wrap{grid-template-columns:1fr}.visual{border-right:0;border-bottom:1px solid #e0e6ed;padding:0 0 22px}
 }
-
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-}
-
-button {
-    border: none;
-    padding: 15px 25px;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.btn-prev {
-    background: #64748b;
-    color: white;
-}
-
-.btn-next {
-    background: #2563eb;
-    color: white;
-}
-
-.btn-finish {
-    background: #16a34a;
-    color: white;
-}
-
-.result {
-    display: none;
-    text-align: center;
-}
-
-.score-box {
-    background: #f0fdf4;
-    border: 2px solid #86efac;
-    padding: 30px;
-    border-radius: 20px;
-    margin-top: 25px;
-}
-
-.score {
-    font-size: 50px;
-    color: #16a34a;
-    font-weight: bold;
-}
-
-.result-detail {
-    font-size: 20px;
-    margin: 10px;
-}
-
-.review {
-    margin-top: 30px;
-    text-align: left;
-}
-
-.review-item {
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    background: #f8fafc;
-    border-left: 6px solid #2563eb;
-}
-
-.correct {
-    color: #15803d;
-    font-weight: bold;
-}
-
-.wrong {
-    color: #dc2626;
-    font-weight: bold;
-}
-
-@media (max-width: 600px) {
-    .container {
-        width: 95%;
-        padding: 20px;
-        margin: 20px auto;
-    }
-
-    .question {
-        font-size: 19px;
-    }
-
-    .option {
-        font-size: 16px;
-    }
+@media(max-width:650px){
+  .header{padding:12px 18px}.brand h1{font-size:17px}.user{display:none}
+  .top{padding:18px}.top h2{font-size:18px}.main{padding:18px}.question-text{font-size:19px}
+  .nav-bottom{padding:16px}.nav-btn{padding:13px 15px;font-size:14px}.top-actions{justify-content:flex-start}
 }
 </style>
 </head>
-
 <body>
+<header class="header">
+  <div class="brand">
+    <div class="logo">🎓</div>
+    <div><h1>RUANG BELAJAR VIRTUAL</h1><p>TRY OUT TKA MATEMATIKA SMA</p></div>
+  </div>
+  <div class="user">Peserta: Siswa TKA<br><small>Member Eksklusif</small></div>
+</header>
 
-<div class="container">
-
-    <div id="quizSection">
-
-        <div class="header">
-            <h1>TRY OUT TKA MATEMATIKA SMA</h1>
-            <p>Latihan Soal HOTS Level C4 – Analisis</p>
-        </div>
-
-        <div class="info">
-            <span id="questionInfo">Soal 1 dari 20</span>
-            <span id="answeredInfo">Terjawab: 0</span>
-        </div>
-
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar"></div>
-        </div>
-
-        <div class="question-number" id="questionNumber"></div>
-
-        <div class="question" id="questionText"></div>
-        <div id="questionImage"></div>
-
-        <div id="options"></div>
-
-        <div class="navigation">
-            <button class="btn-prev" onclick="previousQuestion()">← Sebelumnya</button>
-            <button class="btn-next" id="nextButton" onclick="nextQuestion()">Berikutnya →</button>
-        </div>
-
+<div class="app">
+<div class="exam">
+  <div class="top">
+    <div>
+      <h2 id="title">Soal nomor 1 dari 20</h2>
+      <div class="font-tools">Ukuran font soal:
+        <button onclick="changeFont(-2)">A</button>
+        <button onclick="changeFont(0)">A</button>
+        <button onclick="changeFont(2)" style="font-size:23px">A</button>
+      </div>
     </div>
-
-
-    <div class="result" id="resultSection">
-
-        <div class="header">
-            <h1>HASIL TRY OUT</h1>
-            <p>Evaluasi Kemampuan TKA Matematika SMA</p>
-        </div>
-
-        <div class="score-box">
-
-            <div class="score" id="score"></div>
-
-            <div class="result-detail" id="correctCount"></div>
-
-            <div class="result-detail" id="wrongCount"></div>
-
-            <div class="result-detail" id="percentage"></div>
-
-        </div>
-
-        <div class="review" id="review"></div>
-
+    <div>
+      <div class="top-actions">
+        <button class="blue-btn" onclick="showInfo()">INFORMASI SOAL</button>
+        <div class="pill">Sisa Waktu: <b id="timer">01:30:00</b></div>
+        <button class="blue-btn" onclick="togglePalette()">Daftar Soal ▦</button>
+      </div>
+      <div class="subject">Matematika SMA (Paket 1)</div>
     </div>
+  </div>
+  <div class="progress-area">
+    <div class="progress-label"><span id="progressText">Soal 1 dari 20</span><span id="answeredText">Terjawab: 0</span></div>
+    <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+  </div>
 
+  <div class="layout">
+    <main class="main">
+      <div class="question-wrap">
+        <section class="visual">
+          <div class="image-box" id="imageBox"></div>
+          <div class="question-text" id="questionText"></div>
+        </section>
+        <section class="answer-area">
+          <div class="answer-intro" id="answerIntro">Pilih jawaban yang paling tepat.</div>
+          <div id="options"></div>
+        </section>
+      </div>
+    </main>
+
+    <aside class="palette" id="palette">
+      <h3>Daftar Soal</h3>
+      <div class="numbers" id="numbers"></div>
+      <div class="legend">
+        <span><i class="box"></i> Belum Dijawab</span>
+        <span><i class="box yellow"></i> Ragu-ragu</span>
+        <span><i class="box green"></i> Sudah Dijawab</span>
+        <span><i class="box blue"></i> Soal Aktif</span>
+      </div>
+      <button class="finish" onclick="finishExam()">Selesai Ujian</button>
+    </aside>
+  </div>
+
+  <div class="nav-bottom">
+    <button class="nav-btn prev" onclick="previousQuestion()">← Soal sebelumnya</button>
+    <button class="nav-btn doubt" onclick="toggleDoubt()">☐ Ragu-ragu</button>
+    <button class="nav-btn next" onclick="nextQuestion()">Soal berikutnya →</button>
+  </div>
+</div>
 </div>
 
+<div class="modal" id="modal">
+ <div class="modal-card">
+  <div class="modal-head"><h2 id="modalTitle">Informasi</h2><button class="close" onclick="closeModal()">×</button></div>
+  <div class="modal-body" id="modalBody"></div>
+ </div>
+</div>
 
 <script>
-
+// ======================================================
+// DATA SOAL: gambar disimpan bersama setiap soal.
+// Jika tidak ada gambar, cukup gunakan image: "".
+// ======================================================
 const questions = [
-
 {
-question: "Sebuah toko memberikan diskon 20% untuk sebuah barang. Setelah diskon, pembeli dikenai pajak 11% dari harga setelah diskon. Jika harga akhir barang Rp888.000,00, maka harga awal barang adalah ....",
-options: [
-"Rp900.000,00",
-"Rp950.000,00",
-"Rp1.000.000,00",
-"Rp1.050.000,00",
-"Rp1.100.000,00"
-],
-answer: 2,
-explanation: "Harga akhir = harga awal × 0,8 × 1,11 = harga awal × 0,888. Jadi harga awal = 888.000 ÷ 0,888 = 1.000.000."
+ question:"Seorang siswa memperoleh nilai 70, 75, 80, dan 85 pada empat tes pertama. Agar rata-rata lima tes menjadi 80, nilai minimum pada tes kelima adalah ....",
+ image:"",
+ options:["85","88","90","92","95"], answer:2,
+ explanation:"Jumlah nilai yang diperlukan untuk rata-rata 80 adalah 5 × 80 = 400. Jumlah empat tes = 310, sehingga nilai tes kelima = 400 − 310 = 90."
 },
-
 {
-question: "Diketahui fungsi f(x) = ax + b. Jika f(2) = 7 dan f(5) = 16, maka nilai f(8) adalah ....",
-options: [
-"21",
-"22",
-"23",
-"24",
-"25"
-],
-answer: 4,
-explanation: "Gradien = (16 − 7)/(5 − 2) = 3. Maka f(x) = 3x + 1. Jadi f(8) = 25."
+ question:"Sebuah fungsi kuadrat f(x) = x² − 6x + k memiliki nilai minimum 5. Nilai k adalah ....",
+ image:"",
+ options:["10","12","14","16","18"], answer:2,
+ explanation:"Nilai minimum x² − 6x + k terjadi saat x = 3. Nilainya 9 − 18 + k = k − 9. Karena minimum 5, maka k − 9 = 5 sehingga k = 14."
 },
-
 {
-question: "Sebuah persegi panjang memiliki keliling 40 cm. Jika panjangnya ditambah 2 cm dan lebarnya dikurangi 2 cm, luasnya tetap sama. Luas persegi panjang semula adalah ....",
-options: [
-"90 cm²",
-"96 cm²",
-"100 cm²",
-"104 cm²",
-"108 cm²"
-],
-answer: 2,
-explanation: "Misal panjang p dan lebar l. Karena keliling 40, p + l = 20. Luas tetap: pl = (p+2)(l−2), sehingga p−l = 2. Maka p=11 dan l=9. Luas = 99 cm². Namun pilihan terdekat tidak boleh digunakan."
+ question:"Dua buah dadu dilempar secara bersamaan. Peluang jumlah kedua mata dadu lebih besar dari 9 adalah ....",
+ image:"",
+ options:["1/12","1/9","1/6","5/18","1/3"], answer:2,
+ explanation:"Jumlah lebih dari 9 adalah 10, 11, dan 12 dengan banyak pasangan 3 + 2 + 1 = 6. Total ruang sampel 36, jadi peluang = 6/36 = 1/6."
 },
-
 {
-question: "Sebuah bakteri membelah menjadi dua setiap 30 menit. Mula-mula terdapat 500 bakteri. Jika setelah beberapa waktu jumlah bakteri menjadi 32.000, maka waktu yang diperlukan adalah ....",
-options: [
-"2 jam",
-"2,5 jam",
-"3 jam",
-"3,5 jam",
-"4 jam"
-],
-answer: 2,
-explanation: "32.000/500 = 64 = 2⁶. Terjadi 6 kali pembelahan. Waktu = 6 × 30 menit = 180 menit = 3 jam."
+ question:"Sebuah mobil menempuh setengah jarak perjalanan dengan kecepatan 60 km/jam dan setengah jarak berikutnya dengan kecepatan 90 km/jam. Kecepatan rata-rata mobil adalah ....",
+ image:"",
+ options:["70 km/jam","72 km/jam","75 km/jam","78 km/jam","80 km/jam"], answer:1,
+ explanation:"Untuk dua jarak yang sama, kecepatan rata-rata adalah 2ab/(a+b) = 2(60)(90)/(60+90) = 72 km/jam."
 },
-
 {
-question: "Diketahui barisan aritmetika dengan suku ke-5 adalah 18 dan suku ke-12 adalah 39. Jumlah 20 suku pertama barisan tersebut adalah ....",
-options: [
-"600",
-"610",
-"620",
-"630",
-"640"
-],
-answer: 2,
-explanation: "Selisih 21 untuk 7 langkah, sehingga beda = 3. Suku pertama = 18 − 4(3) = 6. S20 = 20/2 [2(6)+19(3)] = 10(69) = 690. Pilihan seharusnya 690."
+ question:"Jika log₂(x − 1) = 3, maka nilai log₄(x − 1) adalah ....",
+ image:"",
+ options:["1","1,25","1,5","2","3"], answer:2,
+ explanation:"log₂(x−1)=3 berarti x−1=2³=8. Karena 4^(3/2)=8, maka log₄8 = 3/2 = 1,5."
 },
-
 {
-question: "Seorang siswa memperoleh nilai 70, 75, 80, dan 85 pada empat tes pertama. Agar rata-rata lima tes menjadi 80, nilai minimum pada tes kelima adalah ....",
-options: [
-"85",
-"88",
-"90",
-"92",
-"95"
-],
-answer: 2,
-explanation: "Total nilai yang dibutuhkan = 5 × 80 = 400. Jumlah empat nilai = 310. Nilai kelima = 90."
+ question:"Diketahui matriks A = [[2, 1], [3, 2]]. Jika det(A) = d, maka nilai d adalah ....",
+ image:"",
+ options:["-2","-1","0","1","2"], answer:3,
+ explanation:"det(A) = (2)(2) − (1)(3) = 4 − 3 = 1."
 },
-
 {
-question: "Sebuah fungsi kuadrat f(x) = x² − 6x + k memiliki nilai minimum 5. Nilai k adalah ....",
-options: [
-"10",
-"12",
-"14",
-"16",
-"18"
-],
-answer: 2,
-explanation: "Nilai minimum terjadi saat x=3. f(3)=9−18+k=k−9. Karena minimum 5, maka k=14."
+ question:"Diketahui barisan aritmetika dengan suku pertama 5 dan beda 4. Jika jumlah n suku pertama adalah 230, maka nilai n adalah ....",
+ image:"",
+ options:["8","9","10","11","12"], answer:2,
+ explanation:"Sₙ = n/2[2(5)+(n−1)4] = n(2n+3). Jadi n(2n+3)=230. Untuk n=10 diperoleh 10×23=230."
 },
-
 {
-question: "Dua buah dadu dilempar secara bersamaan. Peluang jumlah kedua mata dadu lebih besar dari 9 adalah ....",
-options: [
-"1/12",
-"1/9",
-"1/6",
-"5/18",
-"1/3"
-],
-answer: 2,
-explanation: "Jumlah > 9 berarti 10, 11, 12. Banyak pasangan = 3 + 2 + 1 = 6 dari 36 kemungkinan. Peluang = 6/36 = 1/6."
+ question:"Penyelesaian dari sistem persamaan 2x + y = 11 dan x − y = 1 adalah pasangan (x, y) ....",
+ image:"",
+ options:["(3,5)","(4,3)","(5,1)","(6,-1)","(2,7)"], answer:1,
+ explanation:"Dari x−y=1 diperoleh y=x−1. Substitusi: 2x+x−1=11, sehingga 3x=12, x=4 dan y=3."
 },
-
 {
-question: "Sebuah mobil menempuh perjalanan dengan kecepatan 60 km/jam selama setengah perjalanan pertama dan 90 km/jam selama setengah perjalanan kedua. Kecepatan rata-rata mobil adalah ....",
-options: [
-"70 km/jam",
-"72 km/jam",
-"75 km/jam",
-"78 km/jam",
-"80 km/jam"
-],
-answer: 1,
-explanation: "Untuk dua jarak sama, kecepatan rata-rata = 2ab/(a+b) = 2(60)(90)/150 = 72 km/jam."
+ question:"Sebuah barang didiskon 20%, kemudian harga setelah diskon dinaikkan 20%. Dibandingkan harga awal, harga akhir menjadi ....",
+ image:"",
+ options:["Tetap","Naik 4%","Turun 4%","Naik 2%","Turun 2%"], answer:2,
+ explanation:"Misalkan harga awal 100. Setelah diskon menjadi 80. Kemudian naik 20% dari 80 menjadi 96. Jadi turun 4% dari harga awal."
 },
-
 {
-question: "Jika log₂(x − 1) = 3, maka nilai log₄(x − 1) adalah ....",
-options: [
-"1",
-"1,25",
-"1,5",
-"2",
-"3"
-],
-answer: 2,
-explanation: "x−1 = 2³ = 8. log₄8 = log₂8/log₂4 = 3/2 = 1,5."
+ question:"Jika 3^(x+1) = 27^(x−1), maka nilai x adalah ....",
+ image:"",
+ options:["1","1,5","2","2,5","3"], answer:1,
+ explanation:"27=3³, sehingga 3^(x+1)=3^(3x−3). Maka x+1=3x−3, sehingga 2x=4 dan x=2. Pilihan yang benar seharusnya 2.",
 },
-
 {
-question: "Diketahui matriks A = [[2, 1], [3, 2]]. Jika det(A) = d, maka nilai d adalah ....",
-options: [
-"-2",
-"-1",
-"0",
-"1",
-"2"
-],
-answer: 3,
-explanation: "det(A) = (2)(2) − (1)(3) = 1."
+ question:"Dua bilangan positif memiliki jumlah 20. Agar hasil kali kedua bilangan maksimum, kedua bilangan tersebut adalah ....",
+ image:"",
+ options:["5 dan 15","6 dan 14","8 dan 12","9 dan 11","10 dan 10"], answer:4,
+ explanation:"Untuk jumlah tetap, hasil kali maksimum terjadi saat kedua bilangan sama. Jadi 10 dan 10."
 },
-
 {
-question: "Sebuah segitiga siku-siku memiliki panjang sisi miring 13 cm dan salah satu sisi siku-sikunya 5 cm. Luas segitiga tersebut adalah ....",
-options: [
-"24 cm²",
-"28 cm²",
-"30 cm²",
-"32 cm²",
-"36 cm²"
-],
-answer: 2,
-explanation: "Sisi lainnya = √(13²−5²)=√144=12. Luas = 1/2 × 5 × 12 = 30."
+ question:"Sebuah segitiga siku-siku memiliki panjang sisi miring 13 cm dan salah satu sisi siku-sikunya 5 cm. Luas segitiga tersebut adalah ....",
+ image:"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='360' viewBox='0 0 600 360'><rect width='600' height='360' fill='white'/><path d='M120 280 L120 80 L500 280 Z' fill='none' stroke='%231757b8' stroke-width='5'/><path d='M120 240 h40 v40' fill='none' stroke='%231757b8' stroke-width='4'/><text x='90' y='185' font-size='28' fill='%2326384a'>5 cm</text><text x='290' y='195' font-size='28' fill='%2326384a'>13 cm</text><text x='270' y='320' font-size='25' fill='%2326384a'>sisi lainnya = ?</text></svg>",
+ options:["24 cm²","28 cm²","30 cm²","32 cm²","36 cm²"], answer:2,
+ explanation:"Sisi lainnya = √(13²−5²)=√144=12. Luas = 1/2 × 5 × 12 = 30 cm²."
 },
-
 {
-question: "Harga sebuah saham naik 20% pada hari pertama, kemudian turun 20% pada hari kedua. Dibandingkan harga awal, harga akhir saham ....",
-options: [
-"tetap",
-"naik 4%",
-"turun 2%",
-"turun 4%",
-"turun 8%"
-],
-answer: 3,
-explanation: "Misal harga awal 100. Naik menjadi 120, lalu turun 20% menjadi 96. Jadi turun 4%."
+ question:"Sebuah persegi panjang memiliki keliling 50 cm. Jika panjangnya 3 cm lebih besar daripada lebarnya, maka luas persegi panjang tersebut adalah ....",
+ image:"",
+ options:["144 cm²","150 cm²","154 cm²","156 cm²","160 cm²"], answer:2,
+ explanation:"2(p+l)=50 sehingga p+l=25. p=l+3, maka 2l+3=25, l=11 dan p=14. Luas=154 cm²."
 },
-
 {
-question: "Dari 8 siswa akan dipilih seorang ketua dan seorang wakil ketua. Banyak cara pemilihan adalah ....",
-options: [
-"16",
-"28",
-"48",
-"56",
-"64"
-],
-answer: 3,
-explanation: "Ketua dapat dipilih 8 cara dan wakil 7 cara. Total = 8 × 7 = 56."
+ question:"Jika f(x)=2x−3 dan g(x)=x²+1, maka nilai (g∘f)(2) adalah ....",
+ image:"",
+ options:["1","2","3","4","5"], answer:1,
+ explanation:"f(2)=1. Kemudian g(1)=1²+1=2."
 },
-
 {
-question: "Sebuah lingkaran memiliki jari-jari 14 cm. Jika π = 22/7, maka keliling lingkaran adalah ....",
-options: [
-"44 cm",
-"66 cm",
-"77 cm",
-"88 cm",
-"154 cm"
-],
-answer: 3,
-explanation: "Keliling = 2πr = 2 × 22/7 × 14 = 88 cm."
+ question:"Diketahui data 4, 6, 7, 8, 10. Jika setiap data ditambah 3, maka rata-rata data baru adalah ....",
+ image:"",
+ options:["6","7","8","9","10"], answer:3,
+ explanation:"Rata-rata awal = (4+6+7+8+10)/5 = 7. Setiap data ditambah 3 menyebabkan rata-rata juga bertambah 3 menjadi 10. Pilihan benar adalah 10.",
 },
-
 {
-question: "Diketahui sistem persamaan 2x + y = 11 dan x − y = 1. Nilai x + y adalah ....",
-options: [
-"5",
-"6",
-"7",
-"8",
-"9"
-],
-answer: 2,
-explanation: "Dari x−y=1 diperoleh y=x−1. Substitusi: 2x+x−1=11 sehingga x=4 dan y=3. Jadi x+y=7."
+ question:"Dalam sebuah kotak terdapat 3 bola merah, 2 bola biru, dan 5 bola hijau. Peluang terambil sebuah bola yang bukan hijau adalah ....",
+ image:"",
+ options:["1/5","2/5","1/2","3/5","4/5"], answer:2,
+ explanation:"Bola bukan hijau = 3+2=5 dari total 10, sehingga peluang = 5/10 = 1/2."
 },
-
 {
-question: "Sebuah kubus memiliki volume 216 cm³. Panjang diagonal ruang kubus tersebut adalah ....",
-options: [
-"3√3 cm",
-"4√3 cm",
-"5√3 cm",
-"6√3 cm",
-"9√3 cm"
-],
-answer: 3,
-explanation: "Rusuk kubus = ∛216 = 6. Diagonal ruang = 6√3 cm."
+ question:"Nilai maksimum fungsi y = −x² + 8x − 7 adalah ....",
+ image:"",
+ options:["7","8","9","10","11"], answer:2,
+ explanation:"Titik puncak terjadi pada x = −b/(2a) = −8/(−2)=4. Nilainya y=−16+32−7=9."
 },
-
 {
-question: "Median dari data 4, 6, 7, 8, 10, 12, 15 adalah ....",
-options: [
-"6",
-"7",
-"8",
-"9",
-"10"
-],
-answer: 2,
-explanation: "Jumlah data 7, sehingga median adalah data ke-4, yaitu 8."
+ question:"Jika akar-akar persamaan x² − 7x + 10 = 0 adalah p dan q, maka p² + q² adalah ....",
+ image:"",
+ options:["19","25","29","39","49"], answer:2,
+ explanation:"p+q=7 dan pq=10. Maka p²+q²=(p+q)²−2pq=49−20=29."
 },
-
 {
-question: "Sebuah perusahaan meningkatkan produksi dari 800 unit menjadi 1.000 unit. Persentase kenaikan produksi adalah ....",
-options: [
-"20%",
-"22,5%",
-"25%",
-"30%",
-"35%"
-],
-answer: 2,
-explanation: "Kenaikan = 200. Persentase = 200/800 × 100% = 25%."
+ question:"Sebuah tabung berjari-jari 7 cm dan tinggi 10 cm. Dengan π=22/7, volumenya adalah ....",
+ image:"",
+ options:["770 cm³","1.100 cm³","1.540 cm³","2.200 cm³","3.080 cm³"], answer:2,
+ explanation:"V=πr²t=(22/7)×49×10=1540 cm³."
 },
-
 {
-question: "Diketahui f(x) = 2x² − 8x + 5. Koordinat titik puncak grafik fungsi tersebut adalah ....",
-options: [
-"(1, 1)",
-"(2, −3)",
-"(2, −5)",
-"(4, −3)",
-"(4, 5)"
-],
-answer: 1,
-explanation: "x puncak = −b/(2a)=8/4=2. f(2)=8−16+5=−3. Titik puncak (2,−3)."
+ question:"Sebuah kelas terdiri atas 18 siswa perempuan dan 12 siswa laki-laki. Jika dipilih satu siswa secara acak, peluang terpilih siswa perempuan adalah ....",
+ image:"",
+ options:["2/5","1/2","3/5","2/3","3/4"], answer:2,
+ explanation:"Peluang = 18/(18+12)=18/30=3/5."
 }
-
 ];
 
-
 let currentQuestion = 0;
-let answers = new Array(questions.length).fill(null);
+let answers = Array(questions.length).fill(null);
+let doubts = Array(questions.length).fill(false);
+let fontSize = 22;
+let timeLeft = 90*60;
 
-
-function renderQuestion() {
-
-    const q = questions[currentQuestion];
-
-    document.getElementById("questionInfo").innerText =
-        "Soal " + (currentQuestion + 1) + " dari " + questions.length;
-
-    document.getElementById("questionNumber").innerText =
-        "SOAL " + (currentQuestion + 1);
-
-    document.getElementById("questionText").innerText =
-        q.question;
-
-const imageContainer = document.getElementById("questionImage");
-
-if (q.image) {
-    imageContainer.innerHTML = `<img src="${q.image}" alt="Gambar Soal">`;
-} else {
-    imageContainer.innerHTML = "";
+function renderQuestion(){
+ const q=questions[currentQuestion];
+ document.getElementById("title").textContent=`Soal nomor ${currentQuestion+1} dari ${questions.length}`;
+ document.getElementById("progressText").textContent=`Soal ${currentQuestion+1} dari ${questions.length}`;
+ document.getElementById("questionText").textContent=q.question;
+ document.getElementById("questionText").style.fontSize=fontSize+"px";
+ document.getElementById("progressBar").style.width=((currentQuestion+1)/questions.length*100)+"%";
+ const answered=answers.filter(x=>x!==null).length;
+ document.getElementById("answeredText").textContent=`Terjawab: ${answered}`;
+ const imageBox=document.getElementById("imageBox");
+ imageBox.innerHTML=q.image?`<img src="${q.image}" alt="Gambar soal">`:"";
+ const options=document.getElementById("options");
+ options.innerHTML="";
+ q.options.forEach((op,i)=>{
+   const b=document.createElement("button");
+   b.className="option"+(answers[currentQuestion]===i?" selected":"");
+   b.innerHTML=`<span class="radio"></span><span><b>${String.fromCharCode(65+i)}.</b> ${op}</span>`;
+   b.onclick=()=>selectAnswer(i);
+   options.appendChild(b);
+ });
+ renderNumbers();
 }
-
-const optionsContainer =
-    document.getElementById("options"); 
-    
-     optionsContainer.innerHTML = "";
-
-    q.options.forEach((option, index) => {
-
-        const label = document.createElement("label");
-
-        label.className = "option";
-
-        if (answers[currentQuestion] === index) {
-            label.classList.add("selected");
-        }
-
-        label.innerHTML =
-            '<input type="radio" name="option" value="' + index + '"' +
-            (answers[currentQuestion] === index ? " checked" : "") +
-            '> ' +
-            String.fromCharCode(65 + index) + ". " + option;
-
-        label.onclick = function() {
-            selectAnswer(index);
-        };
-
-        optionsContainer.appendChild(label);
-
-    });
-
-    const answered =
-        answers.filter(answer => answer !== null).length;
-
-    document.getElementById("answeredInfo").innerText =
-        "Terjawab: " + answered;
-
-    document.getElementById("progressBar").style.width =
-        ((currentQuestion + 1) / questions.length * 100) + "%";
-
-    const nextButton =
-        document.getElementById("nextButton");
-
-    if (currentQuestion === questions.length - 1) {
-
-        nextButton.innerText = "Selesai Try Out ✓";
-        nextButton.className = "btn-finish";
-
-    } else {
-
-        nextButton.innerText = "Berikutnya →";
-        nextButton.className = "btn-next";
-
-    }
-
+function selectAnswer(i){answers[currentQuestion]=i;renderQuestion()}
+function renderNumbers(){
+ const el=document.getElementById("numbers");el.innerHTML="";
+ questions.forEach((q,i)=>{
+   const b=document.createElement("button");
+   b.className="num";
+   if(i===currentQuestion)b.classList.add("active");
+   else if(doubts[i])b.classList.add("doubt");
+   else if(answers[i]!==null)b.classList.add("answered");
+   b.textContent=i+1;b.onclick=()=>{currentQuestion=i;renderQuestion();window.scrollTo({top:0,behavior:"smooth"})};
+   el.appendChild(b);
+ });
 }
-
-
-function selectAnswer(index) {
-
-    answers[currentQuestion] = index;
-
-    renderQuestion();
-
+function nextQuestion(){if(currentQuestion<questions.length-1){currentQuestion++;renderQuestion();window.scrollTo({top:0,behavior:"smooth"})}}
+function previousQuestion(){if(currentQuestion>0){currentQuestion--;renderQuestion();window.scrollTo({top:0,behavior:"smooth"})}}
+function toggleDoubt(){doubts[currentQuestion]=!doubts[currentQuestion];renderQuestion()}
+function togglePalette(){document.getElementById("palette").scrollIntoView({behavior:"smooth"})}
+function changeFont(delta){if(delta===0)fontSize=22;else fontSize=Math.max(16,Math.min(30,fontSize+delta));renderQuestion()}
+function showInfo(){
+ document.getElementById("modalTitle").textContent="Informasi Try Out";
+ document.getElementById("modalBody").innerHTML=`<p><b>Try Out TKA Matematika SMA</b></p><p>Jumlah soal: ${questions.length} soal.</p><p>Pilih jawaban terbaik. Gunakan tombol <b>Ragu-ragu</b> untuk menandai soal yang ingin diperiksa kembali.</p>`;
+ document.getElementById("modal").classList.add("show");
 }
-
-
-function nextQuestion() {
-
-    if (answers[currentQuestion] === null) {
-
-        alert("Silakan pilih salah satu jawaban terlebih dahulu.");
-
-        return;
-
-    }
-
-    if (currentQuestion < questions.length - 1) {
-
-        currentQuestion++;
-
-        renderQuestion();
-
-    } else {
-
-        finishQuiz();
-
-    }
-
+function closeModal(){document.getElementById("modal").classList.remove("show")}
+function finishExam(){
+ const answered=answers.filter(x=>x!==null).length;
+ const doubt=doubts.filter(Boolean).length;
+ document.getElementById("modalTitle").textContent="Konfirmasi Selesai Ujian";
+ document.getElementById("modalBody").innerHTML=`<p>Soal terjawab: <b>${answered}/${questions.length}</b></p><p>Soal ragu-ragu: <b>${doubt}</b></p><button class="blue-btn" style="margin-top:10px" onclick="showResult()">Selesai dan Lihat Hasil</button>`;
+ document.getElementById("modal").classList.add("show");
 }
-
-
-function previousQuestion() {
-
-    if (currentQuestion > 0) {
-
-        currentQuestion--;
-
-        renderQuestion();
-
-    }
-
+function showResult(){
+ let correct=0;
+ questions.forEach((q,i)=>{if(answers[i]===q.answer)correct++});
+ const score=Math.round(correct/questions.length*100);
+ document.getElementById("modalTitle").textContent="Hasil Try Out";
+ document.getElementById("modalBody").innerHTML=`<div class="result"><div>Nilai Anda</div><div class="score">${score}</div><p>Jawaban benar: <b>${correct}</b> dari ${questions.length} soal</p></div><div class="result-list">${questions.map((q,i)=>`<div class="explain"><b>Soal ${i+1}: ${answers[i]===q.answer?"✓ Benar":"✗ Periksa kembali"}</b><br>${q.explanation}</div>`).join("")}</div>`;
 }
-
-
-function finishQuiz() {
-
-    const unanswered =
-        answers.filter(answer => answer === null).length;
-
-    if (unanswered > 0) {
-
-        alert(
-            "Masih ada " +
-            unanswered +
-            " soal yang belum dijawab."
-        );
-
-        return;
-
-    }
-
-    let correct = 0;
-
-    questions.forEach((q, index) => {
-
-        if (answers[index] === q.answer) {
-
-            correct++;
-
-        }
-
-    });
-
-    const wrong =
-        questions.length - correct;
-
-    const score =
-        Math.round(
-            correct / questions.length * 100
-        );
-
-    document.getElementById("quizSection").style.display =
-        "none";
-
-    document.getElementById("resultSection").style.display =
-        "block";
-
-    document.getElementById("score").innerText =
-        score;
-
-    document.getElementById("correctCount").innerText =
-        "✓ Jawaban Benar: " + correct;
-
-    document.getElementById("wrongCount").innerText =
-        "✗ Jawaban Salah: " + wrong;
-
-    document.getElementById("percentage").innerText =
-        "Nilai: " + score;
-
-    const review =
-        document.getElementById("review");
-
-    review.innerHTML =
-        "<h2>Pembahasan Jawaban</h2>";
-
-    questions.forEach((q, index) => {
-
-        const userAnswer =
-            answers[index];
-
-        const isCorrect =
-            userAnswer === q.answer;
-
-        const item =
-            document.createElement("div");
-
-        item.className =
-            "review-item";
-
-        item.innerHTML =
-            "<strong>Soal " +
-            (index + 1) +
-            "</strong><br><br>" +
-
-            q.question +
-
-            "<br><br><span class='" +
-            (isCorrect ? "correct" : "wrong") +
-            "'>" +
-
-            (isCorrect
-                ? "✓ Jawaban Anda benar."
-                : "✗ Jawaban Anda salah.") +
-
-            "</span><br><br>" +
-
-            "<strong>Jawaban benar: " +
-            String.fromCharCode(65 + q.answer) +
-            ". " +
-            q.options[q.answer] +
-            "</strong><br><br>" +
-
-            "<strong>Pembahasan:</strong> " +
-            q.explanation;
-
-        review.appendChild(item);
-
-    });
-
-}
-
-
+setInterval(()=>{
+ if(timeLeft<=0)return;
+ timeLeft--;
+ const h=Math.floor(timeLeft/3600),m=Math.floor(timeLeft%3600/60),s=timeLeft%60;
+ document.getElementById("timer").textContent=[h,m,s].map(x=>String(x).padStart(2,"0")).join(":");
+},1000);
 renderQuestion();
-
 </script>
-
 </body>
 </html>
