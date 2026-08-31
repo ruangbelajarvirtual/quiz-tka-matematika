@@ -204,134 +204,13 @@ body{
   <div class="modal-body" id="modalBody"></div>
  </div>
 </div>
-
+<script src="questions.js"></script>
 <script>
 // ======================================================
 // DATA SOAL: gambar disimpan bersama setiap soal.
 // Jika tidak ada gambar, cukup gunakan image: "".
 // ======================================================
-const questions = [
-{
- question:"Seorang siswa memperoleh nilai 70, 75, 80, dan 85 pada empat tes pertama. Agar rata-rata lima tes menjadi 80, nilai minimum pada tes kelima adalah ....",
- image:"",
- options:["85","88","90","92","95"], answer:2,
- explanation:"Jumlah nilai yang diperlukan untuk rata-rata 80 adalah 5 × 80 = 400. Jumlah empat tes = 310, sehingga nilai tes kelima = 400 − 310 = 90."
-},
-{
- question:"Sebuah fungsi kuadrat f(x) = x² − 6x + k memiliki nilai minimum 5. Nilai k adalah ....",
- image:"",
- options:["10","12","14","16","18"], answer:2,
- explanation:"Nilai minimum x² − 6x + k terjadi saat x = 3. Nilainya 9 − 18 + k = k − 9. Karena minimum 5, maka k − 9 = 5 sehingga k = 14."
-},
-{
- question:"Dua buah dadu dilempar secara bersamaan. Peluang jumlah kedua mata dadu lebih besar dari 9 adalah ....",
- image:"",
- options:["1/12","1/9","1/6","5/18","1/3"], answer:2,
- explanation:"Jumlah lebih dari 9 adalah 10, 11, dan 12 dengan banyak pasangan 3 + 2 + 1 = 6. Total ruang sampel 36, jadi peluang = 6/36 = 1/6."
-},
-{
- question:"Sebuah mobil menempuh setengah jarak perjalanan dengan kecepatan 60 km/jam dan setengah jarak berikutnya dengan kecepatan 90 km/jam. Kecepatan rata-rata mobil adalah ....",
- image:"",
- options:["70 km/jam","72 km/jam","75 km/jam","78 km/jam","80 km/jam"], answer:1,
- explanation:"Untuk dua jarak yang sama, kecepatan rata-rata adalah 2ab/(a+b) = 2(60)(90)/(60+90) = 72 km/jam."
-},
-{
- question:"Jika log₂(x − 1) = 3, maka nilai log₄(x − 1) adalah ....",
- image:"",
- options:["1","1,25","1,5","2","3"], answer:2,
- explanation:"log₂(x−1)=3 berarti x−1=2³=8. Karena 4^(3/2)=8, maka log₄8 = 3/2 = 1,5."
-},
-{
- question:"Diketahui matriks A = [[2, 1], [3, 2]]. Jika det(A) = d, maka nilai d adalah ....",
- image:"",
- options:["-2","-1","0","1","2"], answer:3,
- explanation:"det(A) = (2)(2) − (1)(3) = 4 − 3 = 1."
-},
-{
- question:"Diketahui barisan aritmetika dengan suku pertama 5 dan beda 4. Jika jumlah n suku pertama adalah 230, maka nilai n adalah ....",
- image:"",
- options:["8","9","10","11","12"], answer:2,
- explanation:"Sₙ = n/2[2(5)+(n−1)4] = n(2n+3). Jadi n(2n+3)=230. Untuk n=10 diperoleh 10×23=230."
-},
-{
- question:"Penyelesaian dari sistem persamaan 2x + y = 11 dan x − y = 1 adalah pasangan (x, y) ....",
- image:"",
- options:["(3,5)","(4,3)","(5,1)","(6,-1)","(2,7)"], answer:1,
- explanation:"Dari x−y=1 diperoleh y=x−1. Substitusi: 2x+x−1=11, sehingga 3x=12, x=4 dan y=3."
-},
-{
- question:"Sebuah barang didiskon 20%, kemudian harga setelah diskon dinaikkan 20%. Dibandingkan harga awal, harga akhir menjadi ....",
- image:"",
- options:["Tetap","Naik 4%","Turun 4%","Naik 2%","Turun 2%"], answer:2,
- explanation:"Misalkan harga awal 100. Setelah diskon menjadi 80. Kemudian naik 20% dari 80 menjadi 96. Jadi turun 4% dari harga awal."
-},
-{
- question:"Jika 3^(x+1) = 27^(x−1), maka nilai x adalah ....",
- image:"",
- options:["1","1,5","2","2,5","3"], answer:1,
- explanation:"27=3³, sehingga 3^(x+1)=3^(3x−3). Maka x+1=3x−3, sehingga 2x=4 dan x=2. Pilihan yang benar seharusnya 2.",
-},
-{
- question:"Dua bilangan positif memiliki jumlah 20. Agar hasil kali kedua bilangan maksimum, kedua bilangan tersebut adalah ....",
- image:"",
- options:["5 dan 15","6 dan 14","8 dan 12","9 dan 11","10 dan 10"], answer:4,
- explanation:"Untuk jumlah tetap, hasil kali maksimum terjadi saat kedua bilangan sama. Jadi 10 dan 10."
-},
-{
- question:"Sebuah segitiga siku-siku memiliki panjang sisi miring 13 cm dan salah satu sisi siku-sikunya 5 cm. Luas segitiga tersebut adalah ....",
- image:"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='360' viewBox='0 0 600 360'><rect width='600' height='360' fill='white'/><path d='M120 280 L120 80 L500 280 Z' fill='none' stroke='%231757b8' stroke-width='5'/><path d='M120 240 h40 v40' fill='none' stroke='%231757b8' stroke-width='4'/><text x='90' y='185' font-size='28' fill='%2326384a'>5 cm</text><text x='290' y='195' font-size='28' fill='%2326384a'>13 cm</text><text x='270' y='320' font-size='25' fill='%2326384a'>sisi lainnya = ?</text></svg>",
- options:["24 cm²","28 cm²","30 cm²","32 cm²","36 cm²"], answer:2,
- explanation:"Sisi lainnya = √(13²−5²)=√144=12. Luas = 1/2 × 5 × 12 = 30 cm²."
-},
-{
- question:"Sebuah persegi panjang memiliki keliling 50 cm. Jika panjangnya 3 cm lebih besar daripada lebarnya, maka luas persegi panjang tersebut adalah ....",
- image:"",
- options:["144 cm²","150 cm²","154 cm²","156 cm²","160 cm²"], answer:2,
- explanation:"2(p+l)=50 sehingga p+l=25. p=l+3, maka 2l+3=25, l=11 dan p=14. Luas=154 cm²."
-},
-{
- question:"Jika f(x)=2x−3 dan g(x)=x²+1, maka nilai (g∘f)(2) adalah ....",
- image:"",
- options:["1","2","3","4","5"], answer:1,
- explanation:"f(2)=1. Kemudian g(1)=1²+1=2."
-},
-{
- question:"Diketahui data 4, 6, 7, 8, 10. Jika setiap data ditambah 3, maka rata-rata data baru adalah ....",
- image:"",
- options:["6","7","8","9","10"], answer:3,
- explanation:"Rata-rata awal = (4+6+7+8+10)/5 = 7. Setiap data ditambah 3 menyebabkan rata-rata juga bertambah 3 menjadi 10. Pilihan benar adalah 10.",
-},
-{
- question:"Dalam sebuah kotak terdapat 3 bola merah, 2 bola biru, dan 5 bola hijau. Peluang terambil sebuah bola yang bukan hijau adalah ....",
- image:"",
- options:["1/5","2/5","1/2","3/5","4/5"], answer:2,
- explanation:"Bola bukan hijau = 3+2=5 dari total 10, sehingga peluang = 5/10 = 1/2."
-},
-{
- question:"Nilai maksimum fungsi y = −x² + 8x − 7 adalah ....",
- image:"",
- options:["7","8","9","10","11"], answer:2,
- explanation:"Titik puncak terjadi pada x = −b/(2a) = −8/(−2)=4. Nilainya y=−16+32−7=9."
-},
-{
- question:"Jika akar-akar persamaan x² − 7x + 10 = 0 adalah p dan q, maka p² + q² adalah ....",
- image:"",
- options:["19","25","29","39","49"], answer:2,
- explanation:"p+q=7 dan pq=10. Maka p²+q²=(p+q)²−2pq=49−20=29."
-},
-{
- question:"Sebuah tabung berjari-jari 7 cm dan tinggi 10 cm. Dengan π=22/7, volumenya adalah ....",
- image:"",
- options:["770 cm³","1.100 cm³","1.540 cm³","2.200 cm³","3.080 cm³"], answer:2,
- explanation:"V=πr²t=(22/7)×49×10=1540 cm³."
-},
-{
- question:"Sebuah kelas terdiri atas 18 siswa perempuan dan 12 siswa laki-laki. Jika dipilih satu siswa secara acak, peluang terpilih siswa perempuan adalah ....",
- image:"",
- options:["2/5","1/2","3/5","2/3","3/4"], answer:2,
- explanation:"Peluang = 18/(18+12)=18/30=3/5."
-}
-];
+
 
 let currentQuestion = 0;
 let answers = Array(questions.length).fill(null);
