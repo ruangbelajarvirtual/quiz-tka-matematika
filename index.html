@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Latihan TKA Matematika SMA</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    margin: 0;
+    padding: 20px;
+}
+
+.quiz-container {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #173f5f;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.question-number {
+    color: #0b6b63;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.question {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.option {
+    display: block;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: #f0f7ff;
+}
+
+button {
+    background: #1d70b8;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #155a96;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    display: none;
+}
+
+.correct {
+    background: #d9f7df;
+    color: #166534;
+}
+
+.wrong {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+</style>
+</head>
+
+<body>
+
+<div class="quiz-container">
+
+<h1>LATIHAN TKA MATEMATIKA SMA</h1>
+
+<p class="subtitle">
+Tes Kemampuan Akademik – Latihan Soal
+</p>
+
+<div class="question-number">
+SOAL 1
+</div>
+
+<div class="question">
+Jika 2x + 5 = 17, maka nilai x adalah ....
+</div>
+
+<label class="option">
+<input type="radio" name="jawaban" value="4">
+A. 4
+</label>
+
+<label class="option">
+<input type="radio" name="jawaban" value="5">
+B. 5
+</label>
+
+<label class="option">
+<input type="radio" name="jawaban" value="6">
+C. 6
+</label>
+
+<label class="option">
+<input type="radio" name="jawaban" value="7">
+D. 7
+</label>
+
+<button onclick="cekJawaban()">
+CEK JAWABAN
+</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+function cekJawaban() {
+
+    const jawaban = document.querySelector(
+        'input[name="jawaban"]:checked'
+    );
+
+    const result = document.getElementById("result");
+
+    result.style.display = "block";
+
+    if (!jawaban) {
+
+        result.className = "wrong";
+
+        result.innerHTML =
+        "⚠️ Silakan pilih jawaban terlebih dahulu.";
+
+        return;
+    }
+
+    if (jawaban.value === "6") {
+
+        result.className = "correct";
+
+        result.innerHTML =
+        "✅ Jawaban benar! Nilai x = 6.";
+
+    } else {
+
+        result.className = "wrong";
+
+        result.innerHTML =
+        "❌ Jawaban belum tepat. Coba lagi.";
+    }
+
+}
+
+</script>
+
+</body>
+</html>
