@@ -278,7 +278,7 @@ const questions = [
     ],
     answer: 2,
     explanation: "Total nilai yang diperlukan = 5×80 = 400. Total empat nilai = 310. Nilai kelima = 400−310 = 90."
-  }
+  },
     {
     question: "Sebuah persegi panjang memiliki keliling 40 cm. Jika panjangnya x cm dan lebarnya (20 − x) cm, berapakah luas maksimum persegi panjang tersebut?",
     image: "",
