@@ -279,5 +279,144 @@ const questions = [
     answer: 2,
     explanation: "Total nilai yang diperlukan = 5×80 = 400. Total empat nilai = 310. Nilai kelima = 400−310 = 90."
   }
+    {
+    question: "Sebuah persegi panjang memiliki keliling 40 cm. Jika panjangnya x cm dan lebarnya (20 − x) cm, berapakah luas maksimum persegi panjang tersebut?",
+    image: "",
+    options: [
+      "80 cm²",
+      "96 cm²",
+      "100 cm²",
+      "104 cm²",
+      "120 cm²"
+    ],
+    answer: 2,
+    explanation: "Luas A = x(20 − x) = −x² + 20x. Nilai maksimum terjadi saat x = 10. Lebarnya juga 10 cm, sehingga luas maksimum = 10 × 10 = 100 cm²."
+  },
+
+  {
+    question: "Diketahui suatu barisan bilangan adalah 2, 6, 12, 20, 30, ... Pola tersebut berlanjut secara konsisten. Nilai suku ke-15 adalah ...",
+    image: "",
+    options: [
+      "210",
+      "225",
+      "240",
+      "255",
+      "270"
+    ],
+    answer: 2,
+    explanation: "Pola suku dapat ditulis Uₙ = n(n + 1). Maka U₁₅ = 15 × 16 = 240."
+  },
+
+  {
+    question: "Di sebuah pertunjukan, harga tiket dewasa dan tiket pelajar berbeda. Pada suatu hari terjual 2 tiket dewasa dan 3 tiket pelajar dengan total pendapatan Rp75.000. Pada sesi berikutnya terjual 3 tiket dewasa dan 2 tiket pelajar dengan total pendapatan Rp80.000. Harga satu tiket dewasa adalah ...",
+    image: "",
+    options: [
+      "Rp18.000",
+      "Rp20.000",
+      "Rp22.000",
+      "Rp25.000",
+      "Rp30.000"
+    ],
+    answer: 0,
+    explanation: "Misalkan harga tiket dewasa = x dan tiket pelajar = y. Diperoleh 2x + 3y = 75.000 dan 3x + 2y = 80.000. Eliminasi kedua persamaan menghasilkan x = 18.000. Jadi harga tiket dewasa adalah Rp18.000."
+  },
+
+  {
+    question: "Diberikan fungsi f(x) = 2x − 3 dan g(x) = x² + 1. Nilai dari (g ∘ f)(2) adalah ...",
+    image: "",
+    options: [
+      "1",
+      "2",
+      "3",
+      "5",
+      "7"
+    ],
+    answer: 1,
+    explanation: "(g ∘ f)(2) = g(f(2)). Karena f(2) = 2(2) − 3 = 1, maka g(1) = 1² + 1 = 2."
+  },
+
+  {
+    question: "Sebuah kotak berisi 4 bola merah, 3 bola biru, dan 2 bola hijau. Dua bola diambil secara acak berturut-turut tanpa pengembalian. Peluang kedua bola yang terambil memiliki warna yang sama adalah ...",
+    image: "",
+    options: [
+      "1/3",
+      "5/18",
+      "2/9",
+      "7/18",
+      "1/2"
+    ],
+    answer: 1,
+    explanation: "Peluang dua bola merah = (4/9)(3/8) = 1/6. Peluang dua bola biru = (3/9)(2/8) = 1/12. Peluang dua bola hijau = (2/9)(1/8) = 1/36. Jadi peluang kedua bola memiliki warna yang sama = 1/6 + 1/12 + 1/36 = 5/18."
+  },
+
+  {
+    question: "Fungsi kuadrat f(x) = x² − 6x + k memiliki nilai minimum 4. Nilai k yang memenuhi adalah ...",
+    image: "",
+    options: [
+      "9",
+      "10",
+      "11",
+      "13",
+      "15"
+    ],
+    answer: 3,
+    explanation: "f(x) = x² − 6x + k = (x − 3)² + k − 9. Nilai minimum adalah k − 9. Karena nilai minimum = 4, maka k − 9 = 4 sehingga k = 13."
+  },
+
+  {
+    question: "Rata-rata nilai 5 siswa adalah 75. Setelah salah satu nilai yang semula tercatat 68 diperbaiki menjadi 83, rata-rata kelompok tersebut menjadi ...",
+    image: "",
+    options: [
+      "76",
+      "77",
+      "78",
+      "79",
+      "80"
+    ],
+    answer: 2,
+    explanation: "Jumlah nilai awal = 5 × 75 = 375. Nilai bertambah sebesar 83 − 68 = 15, sehingga jumlah nilai baru = 390. Rata-rata baru = 390/5 = 78."
+  },
+
+  {
+    question: "Seorang siswa berdiri 20√3 meter dari kaki sebuah menara. Jika sudut elevasi dari posisi siswa ke puncak menara adalah 30°, tinggi menara tersebut adalah ...",
+    image: "",
+    options: [
+      "10 meter",
+      "20 meter",
+      "30 meter",
+      "40 meter",
+      "60 meter"
+    ],
+    answer: 1,
+    explanation: "Gunakan tan 30° = tinggi/jarak. Karena tan 30° = 1/√3, maka tinggi = 20√3 × 1/√3 = 20 meter."
+  },
+
+  {
+    question: "Sebuah usaha memproduksi dua jenis produk, A dan B. Setiap produk A membutuhkan 2 jam mesin dan 1 jam tenaga kerja, sedangkan produk B membutuhkan 1 jam mesin dan 1 jam tenaga kerja. Tersedia paling banyak 14 jam mesin dan 10 jam tenaga kerja. Keuntungan setiap produk A adalah Rp3 juta dan produk B Rp2 juta. Kombinasi produksi yang memberikan keuntungan maksimum adalah ...",
+    image: "",
+    options: [
+      "3 produk A dan 8 produk B",
+      "6 produk A dan 2 produk B",
+      "4 produk A dan 6 produk B",
+      "7 produk A dan 0 produk B",
+      "0 produk A dan 10 produk B"
+    ],
+    answer: 2,
+    explanation: "Misalkan x = jumlah produk A dan y = jumlah produk B. Kendala mesin: 2x + y ≤ 14. Kendala tenaga kerja: x + y ≤ 10. Titik pojok yang relevan adalah (0,10), (4,6), (6,2), dan (7,0). Keuntungan P = 3x + 2y. Keuntungan masing-masing adalah Rp20 juta, Rp24 juta, Rp22 juta, dan Rp21 juta. Jadi keuntungan maksimum Rp24 juta diperoleh dari 4 produk A dan 6 produk B."
+  },
+
+  {
+    question: "Dari 5 siswa laki-laki dan 4 siswa perempuan akan dipilih 3 siswa untuk menjadi anggota sebuah tim. Jika tim harus terdiri atas sedikitnya 1 siswa perempuan, banyak cara memilih tim tersebut adalah ...",
+    image: "",
+    options: [
+      "70",
+      "74",
+      "76",
+      "80",
+      "84"
+    ],
+    answer: 1,
+    explanation: "Jumlah seluruh siswa = 9. Banyak cara memilih 3 siswa dari 9 siswa adalah C(9,3) = 84. Tim yang tidak memiliki siswa perempuan berarti memilih 3 siswa dari 5 siswa laki-laki, yaitu C(5,3) = 10. Jadi banyak cara memilih tim dengan sedikitnya 1 siswa perempuan = 84 − 10 = 74."
+  }
 
 ];
