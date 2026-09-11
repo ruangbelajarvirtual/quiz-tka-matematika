@@ -791,7 +791,7 @@ Soal berikutnya →
 </div>
 
 <!-- BANK SOAL PAKET 2 -->
-<script src="questions_paket2.js"></script>
+<script src="questions_paket2.js?v=2"></script>
 
 <script>
 
@@ -895,7 +895,7 @@ function renderQuestion(){
 
     const img=document.createElement("img");
 
-    img.src=q.image;
+    img.src=new URL(q.image,window.location.href).href;
 
     img.alt=
       `Ilustrasi soal ${currentQuestion+1}`;
