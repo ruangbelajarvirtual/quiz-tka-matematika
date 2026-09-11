@@ -33,7 +33,7 @@ const questions = [
     "type": "PG",
     "level": "C4",
     "material": "Aljabar",
-    "image": "images/p2_q3_fungsi_kuadrat.png",
+    "image": "images_paket2/p2_q3_fungsi_kuadrat.png",
     "question": "Keuntungan suatu usaha dinyatakan oleh P(x) = −x^2 + 20x − 75, dengan x banyak produk yang dibuat. Agar keuntungan positif, nilai x harus memenuhi ...",
     "options": [
       "x < 5 atau x > 15",
