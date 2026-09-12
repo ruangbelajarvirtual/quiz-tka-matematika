@@ -35,6 +35,7 @@ const questions = [
     type: "PG",
     level: "C4",
     material: "Data dan Peluang",
+    image: "images/p3_q3_data.png",
     question: "Lima kelas mengikuti simulasi TKA. Data jumlah siswa dan persentase siswa yang mencapai minimal nilai 70 adalah: XI-A 30 siswa, 80%; XI-B 35 siswa, 60%; XI-C 40 siswa, 75%; XI-D 25 siswa, 80%; dan XI-E 50 siswa, 70%. Pernyataan yang benar adalah...",
     options: [
       "XI-E memiliki jumlah siswa dengan nilai minimal 70 paling banyak.",
@@ -67,6 +68,7 @@ const questions = [
     type: "PG",
     level: "C4",
     material: "Trigonometri",
+    image: "images/p3_q5_trigonometri.png",
     question: "Seorang siswa berdiri di titik A dan mengamati puncak sebuah tiang dengan sudut elevasi 30°. Ia bergerak 20 m mendekati tiang ke titik B. Dari B, sudut elevasi menjadi 45°. Berapakah tinggi tiang?",
     options: [
       "10(√3−1) m",
@@ -130,6 +132,7 @@ const questions = [
     type: "PG",
     level: "C4",
     material: "Geometri dan Pengukuran",
+    image: "images/p3_q9_luas_gabungan.png",
     question: "Sebuah taman sekolah berbentuk persegi panjang 20 m × 14 m. Pada salah satu ujung taman terdapat kolam berbentuk setengah lingkaran berdiameter 14 m. Jika π=22/7, berapakah luas area taman yang dapat ditanami?",
     options: [
       "154 m²",
@@ -178,6 +181,7 @@ const questions = [
     type: "PG",
     level: "C4",
     material: "Trigonometri",
+    image: "images/p3_q12_aturan_cosinus.png",
     question: "Pada segitiga ABC diketahui AC=40 m, BC=30 m, dan ∠C=60°. Berapakah panjang AB?",
     options: [
       "10√10 m",
@@ -194,6 +198,7 @@ const questions = [
     type: "PG",
     level: "C4",
     material: "Geometri dan Pengukuran",
+    image: "images/p3_q13_transformasi.png",
     question: "Titik C(6,7) ditranslasikan 3 satuan ke kiri dan 2 satuan ke bawah. Hasilnya kemudian direfleksikan terhadap sumbu-x. Koordinat akhirnya adalah...",
     options: [
       "(3,−5)",
@@ -225,6 +230,7 @@ const questions = [
     type: "PG",
     level: "C4",
     material: "Aljabar",
+    image: "images/p3_q15_program_linear.png",
     question: "Sebuah usaha membuat dua jenis paket. Paket A membutuhkan 2 lembar bahan dan 1 menit pengerjaan, sedangkan Paket B membutuhkan 1 lembar bahan dan 3 menit pengerjaan. Tersedia paling banyak 80 lembar bahan dan 90 menit pengerjaan. Jika x dan y masing-masing menyatakan banyak Paket A dan B, berapa jumlah maksimum paket yang dapat dibuat?",
     options: [
       "30",
@@ -257,6 +263,7 @@ const questions = [
     type: "PG",
     level: "C3",
     material: "Geometri dan Pengukuran",
+    image: "images/p3_q17_volume.png",
     question: "Sebuah gudang berbentuk balok berukuran 40 m × 30 m × 20 m. Gudang akan diisi kubus-kubus kecil dengan panjang rusuk 5 m. Jika seluruh ruang diisi tanpa sisa, berapa banyak kubus kecil yang diperlukan?",
     options: [
       "96",
@@ -336,6 +343,7 @@ const questions = [
     type: "PG",
     level: "C4",
     material: "Geometri dan Pengukuran",
+    image: "images/p3_q22_kesebangunan.png",
     question: "Sebuah tongkat setinggi 1,2 m memiliki bayangan sepanjang 1,6 m. Pada waktu yang sama, sebuah pohon memiliki bayangan sepanjang 12 m. Berapakah tinggi pohon tersebut?",
     options: [
       "7,2 m",
@@ -352,6 +360,7 @@ const questions = [
     type: "PG",
     level: "C5",
     material: "Trigonometri",
+    image: "images/p3_q23_mercusuar.png",
     question: "Sebuah mercusuar berada di titik A dan sebuah perahu berada di titik P. Dari titik A, sudut elevasi terhadap perahu adalah 30°. Titik B berada 100 m dari A pada garis pantai, dan dari B sudut elevasi terhadap perahu adalah 45°. Jika P berada di sisi yang sama terhadap garis AB sehingga ∠APB=105°, tentukan jarak AP.",
     options: [
       "50(√3−1) m",
@@ -462,6 +471,7 @@ const questions = [
     type: "CATEGORY",
     level: "C5",
     material: "Aljabar",
+    image: "images/p3_q30_fungsi_kuadrat.png",
     question: "Banyak permintaan suatu kegiatan sekolah dimodelkan dengan D(x)=80x−x², dengan D(x) dalam satuan ratusan ribu rupiah dan x menyatakan banyaknya kegiatan. Tentukan benar atau salah setiap pernyataan berikut.",
     statements: [
       "Nilai D(x) maksimum terjadi saat x=40.",
