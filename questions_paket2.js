@@ -379,7 +379,7 @@ const questions = [
     "level": "C4",
     "material": "Aljabar",
     "image": "images_paket2/p2_q26_program_linear.png",
-    "question": "Sebuah usaha memproduksi produk A sebanyak x dan produk B sebanyak y. Kendalanya 2x + y≤ 40 dan x + 2y ≤ 50, dengan x,y ≥ 0. Keuntungan A Rp40.000,00 dan B Rp30.000,00. Kombinasi yang memberikan keuntungan maksimum adalah ...",
+    "question": "Sebuah usaha memproduksi produk A sebanyak x dan produk B sebanyak y. Kendalanya 2x + y ≤ 40 dan x + 2y ≤ 50, dengan x,y ≥ 0. Keuntungan A Rp40.000,00 dan B Rp30.000,00. Kombinasi yang memberikan keuntungan maksimum adalah ...",
     "options": [
       "(0,25)",
       "(10,20)",
