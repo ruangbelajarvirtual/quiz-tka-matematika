@@ -408,7 +408,7 @@ const questions = [
     type: "PG",
     level: "C4",
     material: "Aljabar",
-    question: "Sebuah toko menghitung biaya awal suatu pesanan dengan fungsi f(x) = 4.000x + 8.000, dengan x menyatakan jumlah barang. Setelah itu dikenakan biaya tambahan melalui fungsi g(y)=1,1y+2.000. Jika x menyatakan jumlah barang, fungsi yang langsung memberikan biaya akhir adalah...",
+    question: "Sebuah toko menghitung biaya awal suatu pesanan dengan fungsi f(x) = 4.000x + 8.000, dengan x menyatakan jumlah barang. Setelah itu dikenakan biaya tambahan melalui fungsi g(y) = 1,1y + 2.000. Jika x menyatakan jumlah barang, fungsi yang langsung memberikan biaya akhir adalah...",
     options: [
       "4400x+10000",
       "4400x+10800",
