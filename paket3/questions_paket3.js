@@ -472,9 +472,9 @@ const questions = [
     level: "C5",
     material: "Aljabar",
     image: "images/p3_q30_fungsi_kuadrat.png",
-    question: "Banyak permintaan suatu kegiatan sekolah dimodelkan dengan D(x)=80x−x², dengan D(x) dalam satuan ratusan ribu rupiah dan x menyatakan banyaknya kegiatan. Tentukan benar atau salah setiap pernyataan berikut.",
+    question: "Banyak permintaan suatu kegiatan sekolah dimodelkan dengan D(x) = 80x − x², dengan D(x) dalam satuan ratusan ribu rupiah dan x menyatakan banyaknya kegiatan. Tentukan benar atau salah setiap pernyataan berikut.",
     statements: [
-      "Nilai D(x) maksimum terjadi saat x=40.",
+      "Nilai D(x) maksimum terjadi saat x = 40.",
       "Nilai maksimum D(x) adalah 1.600 satuan ratusan ribu rupiah.",
       "Nilai D(20) adalah 1.200 satuan ratusan ribu rupiah.",
       "Nilai D(60) lebih besar daripada D(20)."
