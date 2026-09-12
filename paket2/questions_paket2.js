@@ -33,7 +33,7 @@ const questions = [
     "type": "PG",
     "level": "C4",
     "material": "Aljabar",
-    "image": "images_paket2/p2_q3_fungsi_kuadrat.png",
+    "image": "images/p2_q3_fungsi_kuadrat.png",
     "question": "Keuntungan suatu usaha dinyatakan oleh P(x) = −x^2 + 20x − 75, dengan x banyak produk yang dibuat. Agar keuntungan positif, nilai x harus memenuhi ...",
     "options": [
       "x < 5 atau x > 15",
@@ -64,7 +64,7 @@ const questions = [
     "type": "PG",
     "level": "C4",
     "material": "Geometri dan Pengukuran",
-    "image": "images_paket2/p2_q5_koordinat.png",
+    "image": "images/p2_q5_koordinat.png",
     "question": "Diketahui A(2,4) dan B(8,0). Titik P(x,0) terletak pada sumbu-X dan berjarak sama dari A dan B. Nilai x adalah ...",
     "options": [
       "2",
@@ -108,7 +108,7 @@ const questions = [
     "type": "PG",
     "level": "C3",
     "material": "Trigonometri",
-    "image": "images_paket2/p2_q8_trigonometri_tangga.png",
+    "image": "images/p2_q8_trigonometri_tangga.png",
     "question": "Sebuah tangga panjangnya 10 m disandarkan pada dinding dan membentuk sudut 60° dengan tanah. Jarak kaki tangga dari dinding adalah ...",
     "options": [
       "4 m",
@@ -124,7 +124,7 @@ const questions = [
     "type": "PG",
     "level": "C4",
     "material": "Data dan Peluang",
-    "image": "images_paket2/p2_q9_data_kelulusan.png",
+    "image": "images/p2_q9_data_kelulusan.png",
     "question": "Lima kelas memiliki data jumlah siswa dan persentase kelulusan: A = 40 siswa, 85%; B = 32 siswa, 75%; C = 36 siswa, 75%; D = 30 siswa, 90%; E = 40 siswa, 70%. Kelas dengan jumlah siswa tidak lulus paling banyak adalah ...",
     "options": [
       "Kelas A",
@@ -170,7 +170,7 @@ const questions = [
     "type": "PG",
     "level": "C4",
     "material": "Geometri dan Pengukuran",
-    "image": "images_paket2/p2_q12_kesebangunan.png",
+    "image": "images/p2_q12_kesebangunan.png",
     "question": "Sebuah tongkat setinggi 1,5 m memiliki bayangan 2 m. Pada saat yang sama, sebuah gedung memiliki bayangan 18 m. Jika sinar matahari dianggap sejajar, tinggi gedung adalah ...",
     "options": [
       "10,5 m",
@@ -186,7 +186,7 @@ const questions = [
     "type": "PG",
     "level": "C4",
     "material": "Aljabar",
-    "image": "images_paket2/p2_q13_pertidaksamaan.png",
+    "image": "images/p2_q13_pertidaksamaan.png",
     "question": "Daerah solusi memenuhi 2x + y ≤ 40, x + 2y ≤ 50, x ≥ 10, dan y ≥ 10. Dari titik berikut, titik yang berada dalam daerah solusi adalah ...",
     "options": [
       "(15,20)",
@@ -215,7 +215,7 @@ const questions = [
     "type": "PG",
     "level": "C4",
     "material": "Trigonometri",
-    "image": "images_paket2/p2_q15_dua_lintasan.png",
+    "image": "images/p2_q15_dua_lintasan.png",
     "question": "Dua jalur pendakian memiliki panjang dan sudut kemiringan berbeda. Jalur A panjangnya 100 m dengan sudut 30°, sedangkan jalur B panjangnya 80 m dengan sudut 45°. Pernyataan yang benar adalah ...",
     "options": [
       "Kenaikan vertikal A lebih besar daripada B.",
@@ -246,7 +246,7 @@ const questions = [
     "type": "PG",
     "level": "C3",
     "material": "Geometri dan Pengukuran",
-    "image": "images_paket2/p2_q17_volume_perubahan.png",
+    "image": "images/p2_q17_volume_perubahan.png",
     "question": "Sebuah balok berukuran panjang 4 m, lebar 3 m, dan tinggi 2 m. Panjang dan lebar masing-masing dinaikkan 20%, sedangkan tinggi tetap. Persentase kenaikan volumenya adalah ...",
     "options": [
       "20%",
@@ -318,7 +318,7 @@ const questions = [
     "type": "PG",
     "level": "C4",
     "material": "Geometri dan Pengukuran",
-    "image": "images_paket2/p2_q22_transformasi.png",
+    "image": "images/p2_q22_transformasi.png",
     "question": "Titik C(2,5) ditranslasikan 3 satuan ke kiri dan 2 satuan ke bawah, kemudian dicerminkan terhadap sumbu-Y. Koordinat bayangan akhir C adalah ...",
     "options": [
       "(-1,3)",
@@ -334,7 +334,7 @@ const questions = [
     "type": "PG",
     "level": "C5",
     "material": "Trigonometri",
-    "image": "images_paket2/p2_q23_menara.png",
+    "image": "images/p2_q23_menara.png",
     "question": "Dari titik A, sudut elevasi puncak menara adalah 30°. Dari titik B yang berada 20 m lebih dekat ke menara, sudut elevasinya 45°. Jika tinggi menara h dan jarak B ke kaki menara x, maka nilai h adalah ...",
     "options": [
       "10(√3−1) m",
@@ -378,7 +378,7 @@ const questions = [
     "type": "PG",
     "level": "C4",
     "material": "Aljabar",
-    "image": "images_paket2/p2_q26_program_linear.png",
+    "image": "images/p2_q26_program_linear.png",
     "question": "Sebuah usaha memproduksi produk A sebanyak x dan produk B sebanyak y. Kendalanya 2x + y ≤ 40 dan x + 2y ≤ 50, dengan x,y ≥ 0. Keuntungan A Rp40.000,00 dan B Rp30.000,00. Kombinasi yang memberikan keuntungan maksimum adalah ...",
     "options": [
       "(0,25)",
@@ -394,7 +394,7 @@ const questions = [
     "type": "PG",
     "level": "C4",
     "material": "Geometri dan Pengukuran",
-    "image": "images_paket2/p2_q27_perbandingan_balok.png",
+    "image": "images/p2_q27_perbandingan_balok.png",
     "question": "Kotak A berukuran 20 cm × 15 cm × 10 cm, sedangkan kotak B berukuran 24 cm × 15 cm × 8 cm. Pernyataan yang benar adalah ...",
     "options": [
       "Volume A dan B sama.",
@@ -410,7 +410,7 @@ const questions = [
     "type": "PG",
     "level": "C3",
     "material": "Trigonometri",
-    "image": "images_paket2/p2_q28_segitiga_trigonometri.png",
+    "image": "images/p2_q28_segitiga_trigonometri.png",
     "question": "Dalam segitiga ABC diketahui sudut A = 30°, sudut B = 45°, dan sisi a = 10 cm. Panjang sisi b adalah ...",
     "options": [
       "5√2 cm",
@@ -426,7 +426,7 @@ const questions = [
     "type": "CATEGORY",
     "level": "C5",
     "material": "Data dan Peluang",
-    "image": "images_paket2/p2_q29_survei.png",
+    "image": "images/p2_q29_survei.png",
     "question": "Dalam survei terhadap 200 siswa, pilihan kegiatan adalah olahraga 35%, seni 25%, sains 20%, dan bahasa 15%; sisanya memilih kegiatan lain. Sebanyak 40 siswa dipilih untuk program khusus. Tentukan Benar atau Salah setiap pernyataan berikut.",
     "statements": [
       {"text": "Jika sampel mengikuti proporsi survei, peserta olahraga berjumlah 14 siswa.", "answer": true},
@@ -440,7 +440,7 @@ const questions = [
     "type": "CATEGORY",
     "level": "C5",
     "material": "Aljabar",
-    "image": "images_paket2/p2_q30_model_fungsi_kuadrat.png",
+    "image": "images/p2_q30_model_fungsi_kuadrat.png",
     "question": "Sebuah model pendapatan dinyatakan T(x) = 50.000x − 2.000x^2 untuk 0< x ≤20, dengan x jumlah produk yang terjual. Tentukan Benar atau Salah setiap pernyataan berikut.",
     "statements": [
       {"text": "Pendapatan bertambah ketika x bertambah selama 1≤x<12.", "answer": true},
