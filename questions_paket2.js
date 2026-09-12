@@ -363,7 +363,7 @@ const questions = [
     "type": "PG",
     "level": "C5",
     "material": "Aljabar",
-    "question": "Sebuah model keuntungan dinyatakan P(n)=n^2+10n+100. Seorang analis menyatakan bahwa P(10)=2P(5). Evaluasi pernyataan tersebut.",
+    "question": "Sebuah model keuntungan dinyatakan P(n) = n^2 + 10n + 100. Seorang analis menyatakan bahwa P(10) = 2P(5). Evaluasi pernyataan tersebut.",
     "options": [
       "P(10)>2P(5)",
       "P(10)=2P(5)",
@@ -379,7 +379,7 @@ const questions = [
     "level": "C4",
     "material": "Aljabar",
     "image": "images_paket2/p2_q26_program_linear.png",
-    "question": "Sebuah usaha memproduksi produk A sebanyak x dan produk B sebanyak y. Kendalanya 2x+y≤40 dan x+2y≤50, dengan x,y≥0. Keuntungan A Rp40.000,00 dan B Rp30.000,00. Kombinasi yang memberikan keuntungan maksimum adalah ...",
+    "question": "Sebuah usaha memproduksi produk A sebanyak x dan produk B sebanyak y. Kendalanya 2x + y≤ 40 dan x + 2y ≤ 50, dengan x,y ≥ 0. Keuntungan A Rp40.000,00 dan B Rp30.000,00. Kombinasi yang memberikan keuntungan maksimum adalah ...",
     "options": [
       "(0,25)",
       "(10,20)",
@@ -411,7 +411,7 @@ const questions = [
     "level": "C3",
     "material": "Trigonometri",
     "image": "images_paket2/p2_q28_segitiga_trigonometri.png",
-    "question": "Dalam segitiga ABC diketahui sudut A=30°, sudut B=45°, dan sisi a=10 cm. Panjang sisi b adalah ...",
+    "question": "Dalam segitiga ABC diketahui sudut A = 30°, sudut B = 45°, dan sisi a = 10 cm. Panjang sisi b adalah ...",
     "options": [
       "5√2 cm",
       "10√2 cm",
@@ -441,7 +441,7 @@ const questions = [
     "level": "C5",
     "material": "Aljabar",
     "image": "images_paket2/p2_q30_model_fungsi_kuadrat.png",
-    "question": "Sebuah model pendapatan dinyatakan T(x)=50.000x−2.000x^2 untuk 0<x≤20, dengan x jumlah produk yang terjual. Tentukan Benar atau Salah setiap pernyataan berikut.",
+    "question": "Sebuah model pendapatan dinyatakan T(x) = 50.000x − 2.000x^2 untuk 0< x ≤20, dengan x jumlah produk yang terjual. Tentukan Benar atau Salah setiap pernyataan berikut.",
     "statements": [
       {"text": "Pendapatan bertambah ketika x bertambah selama 1≤x<12.", "answer": true},
       {"text": "Pendapatan maksimum untuk bilangan bulat x dicapai saat x=12 atau x=13.", "answer": true},
