@@ -87,11 +87,11 @@ const questions = [
     material: "Aljabar",
     question: "Sebuah layanan transportasi menetapkan biaya awal tetap Rp8.000,00 dan biaya Rp3.500,00 untuk setiap kilometer perjalanan. Jika x menyatakan jarak perjalanan dalam kilometer, model fungsi biaya C(x) yang tepat adalah...",
     options: [
-      "C(x)=3.500x",
-      "C(x)=8.000x+3.500",
-      "C(x)=3.500x+8.000",
-      "C(x)=11.500x",
-      "C(x)=8.000(x+3.500)"
+      "C(x) = 3.500x",
+      "C(x) = 8.000x + 3.500",
+      "C(x) = 3.500x + 8.000",
+      "C(x) = 11.500x",
+      "C(x) = 8.000(x + 3.500)"
     ],
     answer: 2,
     explanation: "Biaya terdiri atas biaya variabel 3.500x dan biaya tetap 8.000, sehingga C(x)=3.500x+8.000."
@@ -165,7 +165,7 @@ const questions = [
     type: "PG",
     level: "C4",
     material: "Aljabar",
-    question: "Keuntungan suatu produk dimodelkan oleh P(x)=−2x²+80x−300, dengan x menyatakan jumlah produk yang terjual. Agar keuntungan maksimum, berapa banyak produk yang harus terjual?",
+    question: "Keuntungan suatu produk dimodelkan oleh P(x) = −2x² + 80x − 300, dengan x menyatakan jumlah produk yang terjual. Agar keuntungan maksimum, berapa banyak produk yang harus terjual?",
     options: [
       "10",
       "15",
@@ -182,7 +182,7 @@ const questions = [
     level: "C4",
     material: "Trigonometri",
     image: "images/p3_q12_aturan_cosinus.png",
-    question: "Pada segitiga ABC diketahui AC=40 m, BC=30 m, dan ∠C=60°. Berapakah panjang AB?",
+    question: "Pada segitiga ABC diketahui AC = 40m, BC = 30m, dan ∠C = 60°. Berapakah panjang AB?",
     options: [
       "10√10 m",
       "10√13 m",
@@ -273,7 +273,7 @@ const questions = [
       "240"
     ],
     answer: 3,
-    explanation: "Volume balok=40×30×20=24.000 m³. Volume satu kubus=5³=125 m³. Banyak kubus=24.000/125=192."
+    explanation: "Volume balok = 40×30×20 = 24.000 m³. Volume satu kubus=5³=125 m³. Banyak kubus=24.000/125=192."
   },
 
   {
@@ -311,7 +311,7 @@ const questions = [
     type: "PG",
     level: "C4",
     material: "Aljabar",
-    question: "Diketahui f(x)=2x+5 dan g(x)=3x−4. Jika x=10, berapakah nilai f(g(x))?",
+    question: "Diketahui f(x) = 2x + 5 dan g(x) = 3x − 4. Jika x = 10, berapakah nilai f(g(x))?",
     options: [
       "51",
       "55",
@@ -392,7 +392,7 @@ const questions = [
     type: "PG",
     level: "C4",
     material: "Aljabar",
-    question: "Suhu Celsius x dan Fahrenheit f(x) dihubungkan oleh f(x)=9/5 x+32. Jika suhu yang terbaca adalah 95°F, berapakah suhu tersebut dalam Celsius?",
+    question: "Suhu Celsius x dan Fahrenheit f(x) dihubungkan oleh f(x) = 9/5 x + 32. Jika suhu yang terbaca adalah 95°F, berapakah suhu tersebut dalam Celsius?",
     options: [
       "30°C",
       "32°C",
@@ -408,7 +408,7 @@ const questions = [
     type: "PG",
     level: "C4",
     material: "Aljabar",
-    question: "Sebuah toko menghitung biaya awal suatu pesanan dengan fungsi f(x)=4.000x+8.000, dengan x menyatakan jumlah barang. Setelah itu dikenakan biaya tambahan melalui fungsi g(y)=1,1y+2.000. Jika x menyatakan jumlah barang, fungsi yang langsung memberikan biaya akhir adalah...",
+    question: "Sebuah toko menghitung biaya awal suatu pesanan dengan fungsi f(x) = 4.000x + 8.000, dengan x menyatakan jumlah barang. Setelah itu dikenakan biaya tambahan melalui fungsi g(y)=1,1y+2.000. Jika x menyatakan jumlah barang, fungsi yang langsung memberikan biaya akhir adalah...",
     options: [
       "4400x+10000",
       "4400x+10800",
