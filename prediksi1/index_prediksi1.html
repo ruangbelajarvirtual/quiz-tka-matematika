@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Try Out TKA Matematika SMA/SMK - Prediksi 1 - Ruang Belajar Virtual</title>
+
+<style>
+:root{
+  --blue:#1757b8;
+  --light:#f4f7fb;
+  --text:#26384a;
+  --border:#d8e0ea;
+  --yellow:#f6b400;
+  --green:#43a047;
+  --red:#d9363e
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:#e8eef6
+}
+
+.header{
+  min-height:92px;
+  background:linear-gradient(135deg,#12365d,#235c91);
+  color:#fff;
+  padding:16px 4vw;
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px
+}
+
+.logo{
+  width:56px;
+  height:56px;
+  border:2px solid rgba(255,255,255,.45);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-size:25px;
+  background:rgba(255,255,255,.08)
+}
+
+.brand h1{
+  font-size:22px;
+  margin:0
+}
+
+.brand p{
+  margin:5px 0 0;
+  font-size:14px;
+  opacity:.9
+}
+
+.user{
+  text-align:right;
+  font-size:14px
+}
+
+.app{
+  max-width:1500px;
+  margin:16px auto;
+  padding:0 16px 16px
+}
+
+.exam{
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 12px 35px rgba(20,50,80,.16);
+  overflow:hidden
+}
+
+.top{
+  padding:20px 28px;
+  border-bottom:1px solid #e2e8ef;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:flex-start
+}
+
+.top h2{
+  margin:0;
+  font-size:22px
+}
+
+.font-tools{
+  margin-top:16px;
+  display:flex;
+  gap:18px;
+  align-items:center
+}
+
+.font-tools button{
+  border:0;
+  background:transparent;
+  font-size:16px;
+  cursor:pointer;
+  color:#394b5e
+}
+
+.top-actions{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+  justify-content:flex-end
+}
+
+.pill,.blue-btn{
+  border-radius:24px;
+  padding:11px 19px;
+  border:1px solid #b8c5d3;
+  background:#fff;
+  color:#465463;
+  font-size:15px
+}
+
+.blue-btn{
+  background:var(--blue);
+  color:#fff;
+  border-color:var(--blue);
+  cursor:pointer
+}
+
+.subject{
+  text-align:right;
+  margin-top:10px;
+  font-size:18px
+}
+
+.layout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 320px
+}
+
+.main{
+  padding:28px;
+  min-width:0
+}
+
+.question-wrap{
+  display:grid;
+  grid-template-columns:minmax(330px,1.05fr) minmax(430px,1.15fr);
+  gap:30px;
+  min-height:500px
+}
+
+.visual{
+  border-right:1px solid #e0e6ed;
+  padding:8px 30px 18px 0;
+  min-width:0;
+  overflow:hidden
+}
+
+.image-box{
+  text-align:center;
+  margin:0 0 22px;
+  max-width:100%;
+  overflow:hidden
+}
+
+.image-box img{
+  display:block;
+  max-width:100%;
+  width:auto;
+  height:auto;
+  max-height:340px;
+  margin:0 auto;
+  border-radius:8px;
+  object-fit:contain
+}
+
+.question-text{
+  font-size:22px;
+  line-height:1.65;
+  white-space:pre-line;
+  overflow-wrap:anywhere
+}
+
+.answer-area{
+  padding-top:8px;
+  min-width:0
+}
+
+.answer-intro{
+  font-size:18px;
+  line-height:1.55;
+  margin-bottom:18px;
+  white-space:pre-line
+}
+
+.option{
+  width:100%;
+  text-align:left;
+  background:#fff;
+  border:1px solid #d9e0e8;
+  border-radius:14px;
+  padding:17px 20px;
+  margin:10px 0;
+  display:flex;
+  gap:15px;
+  align-items:flex-start;
+  font-size:17px;
+  line-height:1.45;
+  color:#27394b;
+  cursor:pointer;
+  transition:.2s
+}
+
+.option:hover{
+  border-color:#80a7df;
+  background:#f8fbff
+}
+
+.option.selected{
+  border:2px solid #2166cc;
+  background:#eef5ff
+}
+
+.radio,.check{
+  width:25px;
+  height:25px;
+  border:1px solid #b9c5d2;
+  flex:0 0 25px;
+  margin-top:1px;
+  display:grid;
+  place-items:center
+}
+
+.radio{
+  border-radius:50%
+}
+
+.selected .radio{
+  border-color:#2166cc
+}
+
+.selected .radio:after{
+  content:"";
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#2166cc
+}
+
+.check{
+  border-radius:6px;
+  background:#fff
+}
+
+.selected .check{
+  border-color:#2166cc;
+  background:#2166cc
+}
+
+.selected .check:after{
+  content:"✓";
+  color:#fff;
+  font-size:17px;
+  font-weight:bold
+}
+
+.category-item{
+  margin:14px 0;
+  padding:18px;
+  border:1px solid #d9e0e8;
+  border-radius:14px;
+  background:#fff
+}
+
+.category-text{
+  font-size:17px;
+  line-height:1.5;
+  margin-bottom:14px
+}
+
+.category-buttons{
+  display:flex;
+  gap:10px
+}
+
+.category-btn{
+  flex:1;
+  padding:12px 15px;
+  border:1px solid #cbd5df;
+  border-radius:10px;
+  background:#fff;
+  cursor:pointer;
+  font-size:16px;
+  font-weight:600
+}
+
+.category-btn.selected-benar{
+  background:#e9f7ed;
+  border:2px solid #43a047;
+  color:#2e7d32
+}
+
+.category-btn.selected-salah{
+  background:#fff0f0;
+  border:2px solid #d9363e;
+  color:#c62828
+}
+
+.type-label{
+  display:inline-block;
+  margin-bottom:12px;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:bold;
+  background:#eef5ff;
+  color:#2166cc
+}
+
+.nav-bottom{
+  border-top:1px solid #e0e6ed;
+  padding:20px 28px 26px;
+  display:flex;
+  justify-content:space-between;
+  gap:15px
+}
+
+.nav-btn{
+  border:0;
+  border-radius:14px;
+  padding:15px 28px;
+  font-size:17px;
+  font-weight:600;
+  color:#fff;
+  cursor:pointer
+}
+
+.prev{
+  background:var(--red)
+}
+
+.doubt{
+  background:var(--yellow);
+  color:#fff
+}
+
+.next{
+  background:var(--blue)
+}
+
+.palette{
+  border-left:1px solid #e0e6ed;
+  background:#fbfcfe;
+  padding:24px
+}
+
+.palette h3{
+  margin:0 0 20px;
+  font-size:18px
+}
+
+.numbers{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px
+}
+
+.num{
+  height:42px;
+  border:1px solid #cbd5df;
+  border-radius:7px;
+  background:#fff;
+  cursor:pointer;
+  font-size:15px;
+  color:#2f4052
+}
+
+.num.active{
+  background:#2166cc;
+  color:#fff;
+  border-color:#2166cc
+}
+
+.num.answered{
+  background:#70b65b;
+  color:#fff;
+  border-color:#70b65b
+}
+
+.num.doubt{
+  background:#f6b400;
+  color:#fff;
+  border-color:#f6b400
+}
+
+.legend{
+  margin-top:30px;
+  display:grid;
+  gap:13px;
+  font-size:14px
+}
+
+.legend span{
+  display:flex;
+  align-items:center;
+  gap:12px
+}
+
+.box{
+  width:20px;
+  height:20px;
+  border-radius:3px;
+  border:1px solid #cbd5df;
+  background:#fff
+}
+
+.box.yellow{
+  background:#f6b400;
+  border-color:#f6b400
+}
+
+.box.green{
+  background:#70b65b;
+  border-color:#70b65b
+}
+
+.box.blue{
+  background:#2166cc;
+  border-color:#2166cc
+}
+
+.finish{
+  margin-top:28px;
+  width:100%;
+  padding:15px;
+  border:0;
+  border-radius:10px;
+  background:var(--blue);
+  color:#fff;
+  font-size:17px;
+  font-weight:600;
+  cursor:pointer
+}
+
+.progress-area{
+  padding:0 28px 18px
+}
+
+.progress-label{
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:9px
+}
+
+.progress-track{
+  height:9px;
+  border-radius:20px;
+  background:#e2e7ed;
+  overflow:hidden
+}
+
+.progress-bar{
+  height:100%;
+  background:#2166cc;
+  width:5%;
+  transition:.25s
+}
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(20,30,45,.56);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  z-index:20
+}
+
+.modal.show{
+  display:flex
+}
+
+.modal-card{
+  background:#fff;
+  width:min(650px,100%);
+  max-height:90vh;
+  overflow:auto;
+  border-radius:14px;
+  box-shadow:0 18px 50px rgba(0,0,0,.3)
+}
+
+.modal-head{
+  padding:22px;
+  border-bottom:1px solid #e0e6ed;
+  display:flex;
+  justify-content:space-between;
+  align-items:center
+}
+
+.close{
+  border:0;
+  background:none;
+  font-size:26px;
+  cursor:pointer
+}
+
+.modal-body{
+  padding:25px
+}
+
+.result{
+  text-align:center;
+  padding:20px 0
+}
+
+.score{
+  font-size:56px;
+  font-weight:700;
+  color:var(--blue)
+}
+
+.result-list{
+  text-align:left;
+  margin-top:20px
+}
+
+.explain{
+  padding:12px;
+  border-bottom:1px solid #e7ebef;
+  font-size:14px;
+  line-height:1.55
+}
+
+@media(max-width:1050px){
+  .layout{
+    grid-template-columns:1fr
+  }
+
+  .palette{
+    border-left:0;
+    border-top:1px solid #e0e6ed
+  }
+
+  .question-wrap{
+    grid-template-columns:minmax(300px,1fr) minmax(380px,1fr)
+  }
+}
+
+@media(max-width:800px){
+  .question-wrap{
+    grid-template-columns:1fr
+  }
+
+  .visual{
+    border-right:0;
+    border-bottom:1px solid #e0e6ed;
+    padding:0 0 22px
+  }
+
+  .image-box img{
+    max-height:300px
+  }
+}
+
+@media(max-width:650px){
+  .header{
+    padding:12px 18px
+  }
+
+  .brand h1{
+    font-size:17px
+  }
+
+  .user{
+    display:none
+  }
+
+  .top{
+    padding:18px
+  }
+
+  .top h2{
+    font-size:18px
+  }
+
+  .main{
+    padding:18px
+  }
+
+  .question-text{
+    font-size:19px
+  }
+
+  .nav-bottom{
+    padding:16px
+  }
+
+  .nav-btn{
+    padding:13px 15px;
+    font-size:14px
+  }
+
+  .top-actions{
+    justify-content:flex-start
+  }
+}
+
+sup{
+  font-size:.72em;
+  line-height:0;
+  vertical-align:super
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="brand">
+    <div class="logo">🎓</div>
+    <div>
+      <h1>RUANG BELAJAR VIRTUAL</h1>
+      <p>PREDIKSI TKA MATEMATIKA SMA/SMK</p>
+    </div>
+  </div>
+
+  <div class="user">
+    Peserta: Siswa TKA<br>
+    <small>Member Eksklusif</small>
+  </div>
+</header>
+
+<div class="app">
+<div class="exam">
+
+<div class="top">
+
+<div>
+<h2 id="title">Soal nomor 1 dari 30</h2>
+
+<div class="font-tools">
+Ukuran font soal:
+<button onclick="changeFont(-2)">A</button>
+<button onclick="changeFont(0)">A</button>
+<button onclick="changeFont(2)" style="font-size:23px">A</button>
+</div>
+
+</div>
+
+<div>
+
+<div class="top-actions">
+<button class="blue-btn" onclick="showInfo()">INFORMASI SOAL</button>
+
+<div class="pill">
+Sisa Waktu: <b id="timer">01:30:00</b>
+</div>
+
+<button class="blue-btn" onclick="togglePalette()">Daftar Soal ▦</button>
+</div>
+
+<div class="subject">
+Matematika SMA/SMK
+</div>
+
+</div>
+
+</div>
+
+<div class="progress-area">
+<div class="progress-label">
+<span id="progressText">Soal 1 dari 30</span>
+<span id="answeredText">Terjawab: 0</span>
+</div>
+
+<div class="progress-track">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+</div>
+
+<div class="layout">
+
+<main class="main">
+
+<div class="question-wrap">
+
+<section class="visual">
+
+<div class="image-box" id="imageBox"></div>
+
+<div class="question-text" id="questionText"></div>
+
+</section>
+
+<section class="answer-area">
+
+<div class="answer-intro" id="answerIntro">
+Pilih satu jawaban yang paling tepat.
+</div>
+
+<div id="options"></div>
+
+</section>
+
+</div>
+
+</main>
+
+<aside class="palette" id="palette">
+
+<h3>Daftar Soal</h3>
+
+<div class="numbers" id="numbers"></div>
+
+<div class="legend">
+
+<span>
+<i class="box"></i>
+Belum Dijawab
+</span>
+
+<span>
+<i class="box yellow"></i>
+Ragu-ragu
+</span>
+
+<span>
+<i class="box green"></i>
+Sudah Dijawab
+</span>
+
+<span>
+<i class="box blue"></i>
+Soal Aktif
+</span>
+
+</div>
+
+<button class="finish" onclick="finishExam()">
+Selesai Ujian
+</button>
+
+</aside>
+
+</div>
+
+<div class="nav-bottom">
+
+<button class="nav-btn prev" onclick="previousQuestion()">
+← Soal sebelumnya
+</button>
+
+<button class="nav-btn doubt" onclick="toggleDoubt()">
+☐ Ragu-ragu
+</button>
+
+<button class="nav-btn next" onclick="nextQuestion()">
+Soal berikutnya →
+</button>
+
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="modal" id="modal">
+
+<div class="modal-card">
+
+<div class="modal-head">
+<h2 id="modalTitle">Informasi</h2>
+<button class="close" onclick="closeModal()">×</button>
+</div>
+
+<div class="modal-body" id="modalBody"></div>
+
+</div>
+
+</div>
+
+<!-- BANK SOAL PREDIKSI 1 -->
+<!-- index_prediksi1.html and questions_prediksi1.js are in the same folder -->
+<script src="questions_prediksi1.js?v=1"></script>
+
+<script>
+
+let currentQuestion=0,
+answers=Array(questions.length).fill(null),
+doubts=Array(questions.length).fill(false),
+fontSize=22,
+timeLeft=90*60;
+
+function getQuestionType(q){
+  return q.type||"PG";
+}
+
+function isAnswered(q,a){
+
+  const t=getQuestionType(q);
+
+  if(t==="PG")
+    return a!==null;
+
+  if(t==="MCMA")
+    return Array.isArray(a)&&a.length>0;
+
+  if(t==="CATEGORY")
+    return Array.isArray(a)&&
+           a.length===q.statements.length&&
+           a.every(x=>x!==null);
+
+  return false;
+}
+
+function getTypeLabel(q){
+
+  const t=getQuestionType(q);
+
+  return t==="MCMA"
+    ?"PGK – MULTIPLE CHOICE MULTIPLE ANSWER"
+    :t==="CATEGORY"
+    ?"PGK – KATEGORI BENAR / SALAH"
+    :"PILIHAN GANDA";
+}
+
+function escapeHtml(v){
+
+  return String(v??"")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+}
+
+function formatMath(v){
+
+  let s=escapeHtml(v);
+
+  s=s.replace(
+    /(\([^()]+\))\^\(([^()]+)\)/g,
+    '$1<sup>($2)</sup>'
+  );
+
+  s=s.replace(
+    /(\d+|[A-Za-z]+)\^(-?\d+)/g,
+    '$1<sup>$2</sup>'
+  );
+
+  return s;
+}
+
+function renderQuestion(){
+
+  const q=questions[currentQuestion];
+  const type=getQuestionType(q);
+
+  document.getElementById("title").textContent=
+    `Soal nomor ${currentQuestion+1} dari ${questions.length}`;
+
+  document.getElementById("progressText").textContent=
+    `Soal ${currentQuestion+1} dari ${questions.length}`;
+
+  const answered=
+    answers.filter((a,i)=>
+      isAnswered(questions[i],a)
+    ).length;
+
+  document.getElementById("answeredText").textContent=
+    `Terjawab: ${answered}`;
+
+  document.getElementById("progressBar").style.width=
+    `${(answered/questions.length)*100}%`;
+
+  document.getElementById("questionText").innerHTML=
+    formatMath(q.question||"");
+
+  const imageBox=
+    document.getElementById("imageBox");
+
+  imageBox.innerHTML="";
+
+  if(q.image){
+
+    const img=document.createElement("img");
+
+    img.src=new URL(q.image,window.location.href).href;
+
+    img.alt=
+      `Ilustrasi soal ${currentQuestion+1}`;
+
+    imageBox.appendChild(img);
+  }
+
+  const intro=
+    document.getElementById("answerIntro");
+
+  const options=
+    document.getElementById("options");
+
+  options.innerHTML="";
+
+  const label=
+    document.createElement("div");
+
+  label.className="type-label";
+
+  label.textContent=
+    getTypeLabel(q);
+
+  options.appendChild(label);
+
+  if(type==="PG"){
+
+    intro.textContent=
+      "Pilih satu jawaban yang paling tepat.";
+
+    (q.options||[]).forEach((option,index)=>{
+
+      const button=
+        document.createElement("button");
+
+      button.className=
+        "option"+
+        (answers[currentQuestion]===index
+          ?" selected":"");
+
+      button.innerHTML=
+        `<span class="radio"></span>
+         <span>
+         ${String.fromCharCode(65+index)}.
+         ${formatMath(option)}
+         </span>`;
+
+      button.onclick=
+        ()=>selectPG(index);
+
+      options.appendChild(button);
+    });
+
+  }
+
+  else if(type==="MCMA"){
+
+    intro.textContent=
+      "Pilih semua jawaban yang benar. Jawaban dinilai benar jika seluruh pilihan yang dipilih sesuai kunci.";
+
+    const selected=
+      Array.isArray(answers[currentQuestion])
+      ?answers[currentQuestion]
+      :[];
+
+    (q.options||[]).forEach((option,index)=>{
+
+      const button=
+        document.createElement("button");
+
+      button.className=
+        "option"+
+        (selected.includes(index)
+          ?" selected":"");
+
+      button.innerHTML=
+        `<span class="check"></span>
+         <span>
+         ${String.fromCharCode(65+index)}.
+         ${formatMath(option)}
+         </span>`;
+
+      button.onclick=
+        ()=>selectMCMA(index);
+
+      options.appendChild(button);
+    });
+
+  }
+
+  else if(type==="CATEGORY"){
+
+    intro.textContent=
+      "Tentukan apakah setiap pernyataan berikut Benar atau Salah.";
+
+    const selected=
+      Array.isArray(answers[currentQuestion])
+      ?answers[currentQuestion]
+      :[];
+
+    (q.statements||[]).forEach((statement,index)=>{
+
+      const item=
+        document.createElement("div");
+
+      item.className=
+        "category-item";
+
+      const text=
+        document.createElement("div");
+
+      text.className=
+        "category-text";
+
+      text.innerHTML=
+        `<b>${index+1}.</b>
+         ${formatMath(statement)}`;
+
+      const buttons=
+        document.createElement("div");
+
+      buttons.className=
+        "category-buttons";
+
+      const benar=
+        document.createElement("button");
+
+      benar.className=
+        "category-btn"+
+        (selected[index]===true
+          ?" selected-benar":"");
+
+      benar.textContent=
+        "Benar";
+
+      benar.onclick=
+        ()=>selectCategory(index,true);
+
+      const salah=
+        document.createElement("button");
+
+      salah.className=
+        "category-btn"+
+        (selected[index]===false
+          ?" selected-salah":"");
+
+      salah.textContent=
+        "Salah";
+
+      salah.onclick=
+        ()=>selectCategory(index,false);
+
+      buttons.appendChild(benar);
+      buttons.appendChild(salah);
+
+      item.appendChild(text);
+      item.appendChild(buttons);
+
+      options.appendChild(item);
+    });
+  }
+
+  renderNumbers();
+}
+
+function selectPG(index){
+
+  answers[currentQuestion]=index;
+
+  renderQuestion();
+}
+
+function selectMCMA(index){
+
+  let selected=
+    Array.isArray(answers[currentQuestion])
+    ?[...answers[currentQuestion]]
+    :[];
+
+  if(selected.includes(index)){
+
+    selected=
+      selected.filter(x=>x!==index);
+
+  }else{
+
+    selected.push(index);
+
+    selected.sort(
+      (a,b)=>a-b
+    );
+  }
+
+  answers[currentQuestion]=selected;
+
+  renderQuestion();
+}
+
+function selectCategory(index,value){
+
+  let selected=
+    Array.isArray(answers[currentQuestion])
+    ?[...answers[currentQuestion]]
+    :Array(
+       questions[currentQuestion]
+       .statements.length
+     ).fill(null);
+
+  selected[index]=value;
+
+  answers[currentQuestion]=selected;
+
+  renderQuestion();
+}
+
+function renderNumbers(){
+
+  const box=
+    document.getElementById("numbers");
+
+  box.innerHTML="";
+
+  questions.forEach((q,index)=>{
+
+    const button=
+      document.createElement("button");
+
+    button.className="num";
+
+    if(index===currentQuestion)
+
+      button.classList.add("active");
+
+    else if(doubts[index])
+
+      button.classList.add("doubt");
+
+    else if(
+      isAnswered(q,answers[index])
+    )
+
+      button.classList.add("answered");
+
+    button.textContent=index+1;
+
+    button.onclick=()=>{
+
+      currentQuestion=index;
+
+      renderQuestion();
+
+      window.scrollTo({
+        top:0,
+        behavior:"smooth"
+      });
+    };
+
+    box.appendChild(button);
+  });
+}
+
+function previousQuestion(){
+
+  if(currentQuestion>0){
+
+    currentQuestion--;
+
+    renderQuestion();
+
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+  }
+}
+
+function nextQuestion(){
+
+  if(currentQuestion<
+     questions.length-1){
+
+    currentQuestion++;
+
+    renderQuestion();
+
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+  }
+}
+
+function toggleDoubt(){
+
+  doubts[currentQuestion]=
+    !doubts[currentQuestion];
+
+  renderNumbers();
+}
+
+function changeFont(value){
+
+  if(value===0)
+
+    fontSize=22;
+
+  else
+
+    fontSize=
+      Math.max(
+        16,
+        Math.min(
+          30,
+          fontSize+value
+        )
+      );
+
+  document.getElementById(
+    "questionText"
+  ).style.fontSize=
+    fontSize+"px";
+}
+
+function togglePalette(){
+
+  document.getElementById(
+    "palette"
+  ).scrollIntoView({
+    behavior:"smooth",
+    block:"start"
+  });
+}
+
+function showInfo(){
+
+  document.getElementById(
+    "modalTitle"
+  ).textContent=
+    "Informasi Soal";
+
+  document.getElementById(
+    "modalBody"
+  ).innerHTML=`
+
+    <p>
+      <b>
+      Try Out TKA Matematika SMA – Prediksi 1
+      </b>
+    </p>
+
+    <p>
+      Jumlah soal:
+      <b>${questions.length}</b>
+    </p>
+
+    <p>
+      Jenis soal:
+      Pilihan Ganda,
+      Pilihan Ganda Kompleks
+      (Multiple Answer),
+      dan Kategori Benar/Salah.
+    </p>
+
+    <p>
+      Pilih jawaban sesuai petunjuk
+      pada setiap soal.
+      Soal yang diberi tanda
+      ragu-ragu tetap dapat dijawab
+      dan dapat diperiksa kembali
+      melalui daftar soal.
+    </p>
+  `;
+
+  document.getElementById(
+    "modal"
+  ).classList.add("show");
+}
+
+function closeModal(){
+
+  document.getElementById(
+    "modal"
+  ).classList.remove("show");
+}
+
+document.getElementById(
+  "modal"
+).addEventListener(
+  "click",
+  function(e){
+
+    if(e.target===this)
+      closeModal();
+
+  }
+);
+
+function finishExam(){
+
+  const unanswered=
+    questions.filter(
+      (q,i)=>
+      !isAnswered(q,answers[i])
+    ).length;
+
+  if(unanswered>0){
+
+    const lanjut=
+      confirm(
+        `Masih ada ${unanswered} soal yang belum dijawab. Yakin ingin menyelesaikan ujian?`
+      );
+
+    if(!lanjut)
+      return;
+  }
+
+  let score=0;
+
+  questions.forEach(
+    (q,index)=>{
+
+      const type=
+        getQuestionType(q);
+
+      const user=
+        answers[index];
+
+      if(type==="PG"){
+
+        if(user===q.answer)
+          score++;
+
+      }
+
+      else if(type==="MCMA"){
+
+        const a=
+          Array.isArray(user)
+          ?user:[];
+
+        const b=
+          Array.isArray(q.answer)
+          ?q.answer:[];
+
+        if(
+          a.length===b.length &&
+          a.every(x=>b.includes(x))
+        )
+          score++;
+      }
+
+      else if(type==="CATEGORY"){
+
+        const a=
+          Array.isArray(user)
+          ?user:[];
+
+        const b=
+          Array.isArray(q.answer)
+          ?q.answer
+          :[];
+
+        if(
+          a.length===b.length &&
+          a.every(
+            (x,i)=>x===b[i]
+          )
+        )
+          score++;
+      }
+
+    }
+  );
+
+  const percent=
+    Math.round(
+      score/questions.length*100
+    );
+
+  document.getElementById(
+    "modalTitle"
+  ).textContent=
+    "Hasil Try Out";
+
+  document.getElementById(
+    "modalBody"
+  ).innerHTML=`
+
+    <div class="result">
+
+      <div>Skor Anda</div>
+
+      <div class="score">
+        ${percent}
+      </div>
+
+      <div>
+        <b>${score}</b>
+        benar dari
+        <b>${questions.length}</b>
+        soal
+      </div>
+
+    </div>
+
+    <div class="result-list">
+
+      ${questions.map((q,i)=>{
+
+        const type=
+          getQuestionType(q);
+
+        let benar=false;
+
+        if(type==="PG"){
+
+          benar=
+            answers[i]===q.answer;
+
+        }
+
+        else if(type==="MCMA"){
+
+          const a=
+            Array.isArray(answers[i])
+            ?answers[i]:[];
+
+          const b=
+            Array.isArray(q.answer)
+            ?q.answer:[];
+
+          benar=
+            a.length===b.length &&
+            a.every(
+              x=>b.includes(x)
+            );
+        }
+
+        else if(type==="CATEGORY"){
+
+          const a=
+            Array.isArray(answers[i])
+            ?answers[i]:[];
+
+          const b=
+            Array.isArray(q.answer)
+            ?q.answer
+            :[];
+
+          benar=
+            a.length===b.length &&
+            a.every(
+              (x,j)=>x===b[j]
+            );
+        }
+
+        return `
+          <div class="explain">
+
+            <b>
+              Soal ${i+1} —
+              ${benar?"Benar":"Salah"}
+            </b>
+
+            ${
+              q.explanation
+              ?`<br>${formatMath(q.explanation)}`
+              :""
+            }
+
+          </div>
+        `;
+
+      }).join("")}
+
+    </div>
+  `;
+
+  document.getElementById(
+    "modal"
+  ).classList.add("show");
+}
+
+function startTimer(){
+
+  const timer=
+    document.getElementById("timer");
+
+  const interval=
+    setInterval(()=>{
+
+      timeLeft--;
+
+      if(timeLeft<=0){
+
+        clearInterval(interval);
+
+        timeLeft=0;
+
+        finishExam();
+      }
+
+      const h=
+        Math.floor(
+          timeLeft/3600
+        );
+
+      const m=
+        Math.floor(
+          (timeLeft%3600)/60
+        );
+
+      const s=
+        timeLeft%60;
+
+      timer.textContent=
+        String(h).padStart(2,"0")
+        +":"+
+        String(m).padStart(2,"0")
+        +":"+
+        String(s).padStart(2,"0");
+
+    },1000);
+}
+
+renderQuestion();
+
+startTimer();
+
+</script>
+
+</body>
+</html>
