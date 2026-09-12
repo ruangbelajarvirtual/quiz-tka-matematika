@@ -449,7 +449,7 @@ const questions = [
       "7/4"
     ],
     answer: 3,
-    explanation: "Karena θ lancip dan sinθ=3/5, maka cosθ=4/5 dan tanθ=3/4. Jadi cosθ+tanθ=4/5+3/4=16/20+15/20=31/20."
+    explanation: "Karena θ lancip dan sinθ = 3/5, maka cosθ = 4/5 dan tanθ = 3/4. Jadi cosθ + tanθ = 4/5+3/4 = 16/20 + 15/20 = 31/20."
   },
 
   {
