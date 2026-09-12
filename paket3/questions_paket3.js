@@ -440,7 +440,7 @@ const questions = [
     type: "PG",
     level: "C3",
     material: "Trigonometri",
-    question: "Jika θ merupakan sudut lancip dan sin θ=3/5, berapakah nilai cos θ+tan θ?",
+    question: "Jika θ merupakan sudut lancip dan sin θ = 3/5, berapakah nilai cos θ + tan θ?",
     options: [
       "19/20",
       "23/20",
